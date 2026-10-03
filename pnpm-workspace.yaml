@@ -1,3 +1,8 @@
 ignoredBuiltDependencies:
   - sharp
   - unrs-resolver
+
+overrides:
+  # @serwist/turbopack pins browserslist; keeping a single version keeps a single
+  # `serwist` copy, so its offline fallback plugin attaches to the default caches.
+  browserslist: 4.28.6

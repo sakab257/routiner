@@ -1,26 +1,224 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Routiner design tokens (design/RoutinerScreen.dc.html).
+ * Raw palette first, then semantic tokens that flip with the theme,
+ * then the shadcn/ui aliases so its components inherit the same look.
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand — fixed across themes */
+  --brand-50: #ebecff;
+  --brand-300: #afb4ff;
+  --brand-500: #3843ff;
+  --brand-600: #2a33d9;
+  --brand-700: #0000ff;
+  --success-500: #2e9bf0;
+  --success-600: #1877c9;
+  --fail-500: #8b5cf6;
+  --fail-600: #6d3fd6;
+  --gold-500: #ffc247;
+
+  /* Semantic — light */
+  --bg: #f6f9ff;
+  --surface: #ffffff;
+  --ink: #040415;
+  --ink-60: #686873;
+  --ink-40: #9b9ba1;
+  --ink-20: #cdcdd0;
+  --line: #eaecf0;
+  --track: #eaecf0;
+  --soft: #ebecff;
+  --accent-ink: #3843ff;
+  --scrim: rgba(4, 4, 21, 0.45);
+  --success-soft: #e3f3ff;
+  --success-ink: #0b6bb8;
+  --fail-soft: #f0eaff;
+  --fail-ink: #6d3fd6;
+  --warn-soft: #fff1de;
+  --warn-ink: #a35500;
+  --tint-orange: #ffe4d4;
+  --tint-violet: #e6e0ff;
+  --tint-pink: #ffe0ec;
+  --tint-teal: #d7f3ef;
+  --tint-yellow: #fff3c7;
+  --tint-navy: #dde3f5;
+  --chart-line: #3843ff;
+  --mood-high: #3843ff;
+  --mood-low: #afb4ff;
+
+  --gradient-banner: linear-gradient(135deg, #3843ff 0%, #0000ff 100%);
+  --gradient-hero: radial-gradient(110% 70% at 0% 0%, #7b80ff 0%, rgba(123, 128, 255, 0) 60%),
+    linear-gradient(155deg, #3843ff 0%, #0000ff 100%);
+  --gradient-fab: linear-gradient(145deg, #5a63ff 0%, #3843ff 45%, #0000ff 100%);
+
+  /* shadcn/ui aliases */
+  --background: var(--bg);
+  --foreground: var(--ink);
+  --card: var(--surface);
+  --card-foreground: var(--ink);
+  --popover: var(--surface);
+  --popover-foreground: var(--ink);
+  --primary: var(--brand-500);
+  --primary-foreground: #ffffff;
+  --secondary: var(--track);
+  --secondary-foreground: var(--ink);
+  --muted: var(--track);
+  --muted-foreground: var(--ink-60);
+  --accent: var(--soft);
+  --accent-foreground: var(--accent-ink);
+  --destructive: var(--fail-ink);
+  --border: var(--line);
+  --input: var(--line);
+  --ring: var(--brand-300);
+  --radius: 1rem;
+}
+
+.dark {
+  --bg: #0a0b1a;
+  --surface: #16182c;
+  --ink: #f4f5ff;
+  --ink-60: #a6a8ba;
+  --ink-40: #76788c;
+  --ink-20: #3a3c55;
+  --line: #262840;
+  --track: #23253d;
+  --soft: #22266a;
+  --accent-ink: #9097ff;
+  --scrim: rgba(0, 0, 0, 0.6);
+  --success-soft: #10304a;
+  --success-ink: #7cc4ff;
+  --fail-soft: #2a1f4d;
+  --fail-ink: #b79bff;
+  --warn-soft: #3a2a12;
+  --warn-ink: #ffb866;
+  --tint-orange: #3a2518;
+  --tint-violet: #2a2350;
+  --tint-pink: #3a1c2a;
+  --tint-teal: #123330;
+  --tint-yellow: #3a3215;
+  --tint-navy: #1c2340;
+  --chart-line: #9097ff;
+  --mood-high: #5a63ff;
+  --mood-low: #3a3f8f;
+  --ring: #5a63ff;
 }
 
 @theme inline {
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-50: var(--brand-50);
+  --color-brand-300: var(--brand-300);
+  --color-brand: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-success: var(--success-500);
+  --color-success-strong: var(--success-600);
+  --color-success-soft: var(--success-soft);
+  --color-success-ink: var(--success-ink);
+  --color-fail: var(--fail-500);
+  --color-fail-strong: var(--fail-600);
+  --color-fail-soft: var(--fail-soft);
+  --color-fail-ink: var(--fail-ink);
+  --color-warn-soft: var(--warn-soft);
+  --color-warn-ink: var(--warn-ink);
+  --color-gold: var(--gold-500);
+
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-ink-60: var(--ink-60);
+  --color-ink-40: var(--ink-40);
+  --color-ink-20: var(--ink-20);
+  --color-line: var(--line);
+  --color-track: var(--track);
+  --color-soft: var(--soft);
+  --color-accent-ink: var(--accent-ink);
+  --color-scrim: var(--scrim);
+  --color-tint-orange: var(--tint-orange);
+  --color-tint-violet: var(--tint-violet);
+  --color-tint-pink: var(--tint-pink);
+  --color-tint-teal: var(--tint-teal);
+  --color-tint-yellow: var(--tint-yellow);
+  --color-tint-navy: var(--tint-navy);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Tailwind's default sm…4xl radii are kept (lg = 8px chips, xl = 12px).
+     Design radii: tiles 14px, fields 16px, cards 20px, sheets 32px. */
+  --radius-tile: 14px;
+  --radius-field: 16px;
+  --radius-card: 20px;
+  --radius-sheet: 32px;
+
+  --text-chip: 10px;
+  --text-chip--letter-spacing: 1px;
+  --text-chip--font-weight: 700;
+
+  --shadow-card: 0 1px 2px rgba(4, 4, 21, 0.04), 0 8px 24px -12px rgba(16, 24, 92, 0.18);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@utility bg-gradient-banner {
+  background-image: var(--gradient-banner);
+}
+@utility bg-gradient-hero {
+  background-image: var(--gradient-hero);
+}
+@utility bg-gradient-fab {
+  background-image: var(--gradient-fab);
+}
+@utility pt-safe {
+  padding-top: env(safe-area-inset-top);
+}
+@utility pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+    -webkit-tap-highlight-color: transparent;
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    overscroll-behavior-y: none;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
 }

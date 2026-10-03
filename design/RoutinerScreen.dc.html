@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box} button{font-family:inherit} a{color:#3843FF} a:hover{color:#0000FF} ::-webkit-scrollbar{display:none}</style>
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+</helmet>
+<sc-if value="{{ is.phone }}" hint-placeholder-val="{{ true }}">
+<div style="width:390px;height:844px;position:relative;overflow:hidden;border-radius:48px;background:var(--bg);color:var(--text);font-family:'Figtree',system-ui,sans-serif;-webkit-font-smoothing:antialiased">
+
+<sc-if value="{{ is.splash }}">
+<div style="position:absolute;inset:0;background:radial-gradient(110% 70% at 0% 0%,#7B80FF 0%,rgba(123,128,255,0) 60%),linear-gradient(155deg,#3843FF 0%,#0000FF 100%);display:flex;align-items:center;justify-content:center">
+<div style="position:absolute;left:50%;top:50%;width:130px;height:130px;margin:-65px 0 0 -65px;border-radius:50%;border:1px solid rgba(255,255,255,0.16)"></div>
+<div style="position:absolute;left:50%;top:50%;width:250px;height:250px;margin:-125px 0 0 -125px;border-radius:50%;border:1px solid rgba(255,255,255,0.13)"></div>
+<div style="position:absolute;left:50%;top:50%;width:380px;height:380px;margin:-190px 0 0 -190px;border-radius:50%;border:1px solid rgba(255,255,255,0.10)"></div>
+<div style="position:absolute;left:50%;top:50%;width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;border:1px solid rgba(255,255,255,0.07)"></div>
+<div style="display:flex;align-items:center;gap:14px;position:relative">
+<img src="assets/logo-white.png" alt="" style="height:52px;width:auto;display:block">
+<span style="font-size:38px;font-weight:600;color:#FFFFFF;letter-spacing:-0.5px">Routiner</span>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ is.onb }}">
+<div style="position:absolute;inset:0;background:radial-gradient(110% 70% at 0% 0%,#7B80FF 0%,rgba(123,128,255,0) 60%),linear-gradient(155deg,#3843FF 0%,#0000FF 100%);color:#FFFFFF">
+<div style="position:absolute;left:50%;top:330px;width:120px;height:120px;margin:-60px 0 0 -60px;border-radius:50%;border:1px solid rgba(255,255,255,0.14)"></div>
+<div style="position:absolute;left:50%;top:330px;width:240px;height:240px;margin:-120px 0 0 -120px;border-radius:50%;border:1px solid rgba(255,255,255,0.11)"></div>
+<div style="position:absolute;left:50%;top:330px;width:380px;height:380px;margin:-190px 0 0 -190px;border-radius:50%;border:1px solid rgba(255,255,255,0.08)"></div>
+
+<sc-if value="{{ is.onb1 }}">
+<div style="position:absolute;left:236px;top:92px;width:76px;height:76px;border-radius:50%;background:rgba(255,255,255,0.18);border:3px solid rgba(255,255,255,0.55);display:flex;align-items:center;justify-content:center;font-size:34px"><img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Droplet/3D/droplet_3d.png" alt="" style="width:1.2em;height:1.2em;display:inline-block;vertical-align:-0.25em;object-fit:contain"></div>
+<div style="position:absolute;left:52px;top:146px;width:214px;height:54px;border-radius:27px;background:#FFFFFF;display:flex;align-items:center;gap:10px;padding:0 12px;"><span style="width:30px;height:30px;border-radius:50%;background:#3843FF;display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ph-bold ph-check" style="font-size:18px;line-height:1;display:block;color:#FFFFFF"></i></span><span style="font-size:14px;font-weight:600;color:#040415">Boire 2 L d'eau</span></div>
+<div style="position:absolute;left:28px;top:232px;width:88px;height:88px;border-radius:50%;background:rgba(255,255,255,0.18);border:3px solid rgba(255,255,255,0.55);display:flex;align-items:center;justify-content:center;font-size:40px"><img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person%20running/Default/3D/person_running_3d_default.png" alt="" style="width:1.2em;height:1.2em;display:inline-block;vertical-align:-0.25em;object-fit:contain"></div>
+<div style="position:absolute;left:132px;top:256px;width:206px;height:54px;border-radius:27px;background:#FFFFFF;display:flex;align-items:center;gap:10px;padding:0 12px;"><span style="width:30px;height:30px;border-radius:50%;background:#3843FF;display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ph-bold ph-check" style="font-size:18px;line-height:1;display:block;color:#FFFFFF"></i></span><span style="font-size:14px;font-weight:600;color:#040415">Courir 20 min</span></div>
+<div style="position:absolute;left:226px;top:340px;width:100px;height:100px;border-radius:50%;background:rgba(255,255,255,0.18);border:3px solid rgba(255,255,255,0.55);display:flex;align-items:center;justify-content:center;font-size:46px"><img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Open%20book/3D/open_book_3d.png" alt="" style="width:1.2em;height:1.2em;display:inline-block;vertical-align:-0.25em;object-fit:contain"></div>
+<div style="position:absolute;left:40px;top:372px;width:196px;height:54px;border-radius:27px;background:#FFFFFF;display:flex;align-items:center;gap:10px;padding:0 12px;"><span style="width:30px;height:30px;border-radius:50%;border:2px solid #AFB4FF;flex-shrink:0"></span><span style="font-size:14px;font-weight:600;color:#040415">Lire 20 pages</span></div>
+</sc-if>
+
+<sc-if value="{{ is.onb2 }}">
+<div style="position:absolute;left:24px;right:24px;top:96px;display:flex;flex-direction:column;gap:10px">
+<span style="font-size:14px;font-weight:600">Défis</span>
+<div style="background:#FFFFFF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px;color:#040415;">
+<div style="display:flex;align-items:center;gap:12px"><span style="width:40px;height:40px;border-radius:50%;background:#EBECFF;display:flex;align-items:center;justify-content:center;font-size:20px"><img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Books/3D/books_3d.png" alt="" style="width:1.2em;height:1.2em;display:inline-block;vertical-align:-0.25em;object-fit:contain"></span><div style="display:flex;flex-direction:column;flex:1"><span style="font-size:16px;font-weight:600">Lire 30 jours</span><span style="font-size:12px;color:#686873">Jour 12 sur 30</span></div><span style="font-size:10px;font-weight:700;letter-spacing:0.5px;background:#FFF1DE;color:#A35500;padding:4px 8px;border-radius:8px">18 J RESTANTS</span></div>
+<div style="height:6px;border-radius:3px;background:#EAECF0;overflow:hidden"><div style="width:40%;height:100%;background:#3843FF;border-radius:3px"></div></div>
+</div>
+<div style="background:#FFFFFF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px;color:#040415;">
+<div style="display:flex;align-items:center;gap:12px"><span style="width:40px;height:40px;border-radius:50%;background:#E6F8F6;display:flex;align-items:center;justify-content:center;font-size:20px"><img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person%20in%20lotus%20position/Default/3D/person_in_lotus_position_3d_default.png" alt="" style="width:1.2em;height:1.2em;display:inline-block;vertical-align:-0.25em;object-fit:contain"></span><div style="display:flex;flex-direction:column;flex:1"><span style="font-size:16px;font-weight:600">7 jours zen</span><span style="font-size:12px;color:#686873">Jour 5 sur 7</span></div><span style="font-size:10px;font-weight:700;letter-spacing:0.5px;background:#E3F3FF;color:#0B6BB8;padding:4px 8px;border-radius:8px">EN BONNE VOIE</span></div>
+<div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px"><span style="height:26px;border-radius:8px;background:#3843FF"></span><span style="height:26px;border-radius:8px;background:#3843FF"></span><span style="height:26px;border-radius:8px;background:#3843FF"></span><span style="height:26px;border-radius:8px;background:#3843FF"></span><span style="height:26px;border-radius:8px;background:#3843FF"></span><span style="height:26px;border-radius:8px;border:2px solid #3843FF"></span><span style="height:26px;border-radius:8px;background:#EAECF0"></span></div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ is.onb3 }}">
+<div style="position:absolute;left:36px;right:36px;top:104px;background:#FFFFFF;border-radius:24px;padding:18px;color:#040415;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;justify-content:space-between;align-items:flex-end"><div style="display:flex;flex-direction:column"><span style="font-size:12px;color:#686873">Taux de réussite</span><span style="font-size:28px;font-weight:700">78 %</span></div><span style="font-size:10px;font-weight:700;letter-spacing:0.5px;background:#E3F3FF;color:#0B6BB8;padding:4px 8px;border-radius:8px">+6 % CETTE SEMAINE</span></div>
+<div style="display:flex;align-items:flex-end;gap:10px;height:96px"><span style="flex:1;height:55%;border-radius:8px;background:#EBECFF"></span><span style="flex:1;height:68%;border-radius:8px;background:#EBECFF"></span><span style="flex:1;height:45%;border-radius:8px;background:#EBECFF"></span><span style="flex:1;height:86%;border-radius:8px;background:#AFB4FF"></span><span style="flex:1;height:72%;border-radius:8px;background:#EBECFF"></span><span style="flex:1;height:92%;border-radius:8px;background:#3843FF"></span><span style="flex:1;height:30%;border-radius:8px;background:#EAECF0"></span></div>
+</div>
+<div style="position:absolute;left:186px;top:328px;background:#FFFFFF;border-radius:20px;padding:14px 18px;color:#040415;transform:rotate(-4deg);display:flex;flex-direction:column;gap:2px"><span style="font-size:10px;font-weight:700;letter-spacing:1px;color:#686873">MEILLEURE SÉRIE</span><span style="font-size:24px;font-weight:700">22 jours <img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Fire/3D/fire_3d.png" alt="" style="width:1.2em;height:1.2em;display:inline-block;vertical-align:-0.25em;object-fit:contain"></span></div>
+<div style="position:absolute;left:40px;top:356px;background:#FFFFFF;border-radius:20px;padding:12px 16px;color:#040415;transform:rotate(3deg);display:flex;align-items:center;gap:10px"><span style="font-size:28px"><img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Grinning%20face%20with%20smiling%20eyes/3D/grinning_face_with_smiling_eyes_3d.png" alt="" style="width:1.2em;height:1.2em;display:inline-block;vertical-align:-0.25em;object-fit:contain"></span><div style="display:flex;flex-direction:column"><span style="font-size:10px;font-weight:700;letter-spacing:1px;color:#686873">HUMEUR</span><span style="font-size:16px;font-weight:600">Très bien</span></div></div>
+</sc-if>
+
+<div style="position:absolute;left:24px;right:24px;bottom:36px;display:flex;flex-direction:column">
+<span style="font-size:40px;line-height:1.05;font-weight:800;letter-spacing:-0.8px;text-wrap:balance">{{ onb.title }}</span>
+<span style="font-size:16px;line-height:1.45;margin-top:12px;color:rgba(255,255,255,0.92);text-wrap:pretty">{{ onb.text }}</span>
+<div style="display:flex;gap:8px;margin:24px 0 28px">
+<sc-for list="{{ onb.dots }}" as="dot" hint-placeholder-count="3"><span style="height:8px;border-radius:4px;width:{{ dot.w }};background:{{ dot.bg }}"></span></sc-for>
+</div>
+<button style="height:56px;border-radius:28px;border:none;background:#FFFFFF;color:#3843FF;font-size:16px;font-weight:700;cursor:pointer" style-active="background:#EBECFF">{{ onb.cta }}</button>
+<button style="height:44px;margin-top:6px;border:none;background:transparent;color:#FFFFFF;font-size:14px;font-weight:600;cursor:pointer">Passer l'introduction</button>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ is.pick }}">
+<div style="position:absolute;inset:0;overflow-y:auto;padding:66px 20px 120px">
+<span style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--pt)">DERNIÈRE ÉTAPE</span>
+<div style="font-size:24px;font-weight:700;letter-spacing:-0.3px;margin-top:6px;line-height:1.2">Choisis tes premières habitudes</div>
+<div style="font-size:14px;color:var(--text2);margin-top:6px">Tu pourras en ajouter, modifier ou supprimer plus tard.</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px">
+<sc-for list="{{ picks }}" as="p" hint-placeholder-count="8">
+<button onClick="{{ p.onClick }}" style="position:relative;height:112px;border-radius:20px;border:{{ p.border }};background:{{ p.bg }};padding:14px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;cursor:pointer;text-align:left;color:var(--text)">
+<span style="width:44px;height:44px;border-radius:14px;background:{{ p.tint }};display:flex;align-items:center;justify-content:center;font-size:22px"><img src="{{ p.emoji }}" alt="" style="width:30px;height:30px;display:block;object-fit:contain"></span>
+<span style="display:flex;flex-direction:column"><span style="font-size:16px;font-weight:600">{{ p.name }}</span><span style="font-size:12px;color:var(--text2)">{{ p.sub }}</span></span>
+<sc-if value="{{ p.on }}"><span style="position:absolute;top:12px;right:12px;width:24px;height:24px;border-radius:50%;background:#3843FF;display:flex;align-items:center;justify-content:center"><i class="ph-bold ph-check" style="font-size:15px;line-height:1;display:block;color:#FFFFFF"></i></span></sc-if>
+</button>
+</sc-for>
+</div>
+</div>
+<div style="position:absolute;left:0;right:0;bottom:0;padding:24px 20px 36px;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,var(--bg) 35%)">
+<button style="width:100%;height:56px;border-radius:28px;border:none;background:{{ pickBtn.bg }};color:#FFFFFF;font-size:16px;font-weight:700;cursor:pointer;" style-active="background:#2A33D9">{{ pickBtn.label }}</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ is.homeLike }}">
+<div style="position:absolute;inset:0;overflow-y:auto;padding:62px 20px 130px">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+<div style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="font-size:24px;font-weight:700;letter-spacing:-0.3px">Bonjour <img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Waving%20hand/Default/3D/waving_hand_3d_default.png" alt="" style="width:1.2em;height:1.2em;display:inline-block;vertical-align:-0.25em;object-fit:contain"></span><span style="font-size:14px;color:var(--text2)">Samedi 3 octobre · on garde le rythme</span></div>
+<button aria-label="Humeur du jour" style="width:48px;height:48px;border-radius:50%;border:none;background:var(--soft);font-size:24px;cursor:pointer;flex-shrink:0"><img src="{{ moodEmoji }}" alt="" style="width:30px;height:30px;display:block;object-fit:contain"></button>
+</div>
+<div style="display:flex;justify-content:space-between;margin-top:20px">
+<sc-for list="{{ days }}" as="d" hint-placeholder-count="7">
+<button onClick="{{ d.onClick }}" style="width:44px;height:64px;border-radius:14px;border:{{ d.border }};background:var(--card);color:{{ d.color }};display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;cursor:pointer;padding:0;position:relative">
+<span style="font-size:18px;font-weight:700">{{ d.n }}</span><span style="font-size:10px;font-weight:700;letter-spacing:0.5px">{{ d.w }}</span>
+<span style="position:absolute;bottom:6px;width:4px;height:4px;border-radius:2px;background:{{ d.dot }}"></span>
+</button>
+</sc-for>
+</div>
+<div style="margin-top:18px;border-radius:20px;padding:16px;background:linear-gradient(135deg,#3843FF 0%,#0000FF 100%);display:flex;align-items:center;gap:14px;">
+<div style="position:relative;width:56px;height:56px;flex-shrink:0">
+<svg width="56" height="56" viewBox="0 0 56 56" style="transform:rotate(-90deg)"><circle cx="28" cy="28" r="24" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="5"></circle><circle cx="28" cy="28" r="24" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-dasharray="{{ banner.dash }}"></circle></svg>
+<span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#FFFFFF;font-size:13px;font-weight:700">{{ banner.pct }}</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:2px;color:#FFFFFF"><span style="font-size:16px;font-weight:600">{{ banner.title }}</span><span style="font-size:14px;color:rgba(255,255,255,0.88)">{{ banner.sub }}</span></div>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-top:20px"><span style="font-size:18px;font-weight:600">Défis</span><button style="height:44px;padding:0 4px;border:none;background:transparent;color:var(--pt);font-size:12px;font-weight:700;letter-spacing:0.5px;cursor:pointer">VOIR TOUT</button></div>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;gap:12px"><span style="width:40px;height:40px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0"><img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Books/3D/books_3d.png" alt="" style="width:1.2em;height:1.2em;display:inline-block;vertical-align:-0.25em;object-fit:contain"></span><div style="display:flex;flex-direction:column;flex:1;min-width:0"><span style="font-size:16px;font-weight:600">Lire 30 jours</span><span style="font-size:12px;color:var(--text2)">Jour 12 sur 30 · 2 tâches aujourd'hui</span></div><span style="font-size:10px;font-weight:700;letter-spacing:0.5px;background:var(--warn-soft);color:var(--warn-text);padding:4px 8px;border-radius:8px;flex-shrink:0">18 J</span></div>
+<div style="height:6px;border-radius:3px;background:var(--track);overflow:hidden"><div style="width:40%;height:100%;background:#3843FF;border-radius:3px"></div></div>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px"><span style="font-size:18px;font-weight:600">Habitudes</span><button style="height:44px;padding:0 4px;border:none;background:transparent;color:var(--pt);font-size:12px;font-weight:700;letter-spacing:0.5px;cursor:pointer">VOIR TOUT</button></div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<sc-for list="{{ habits }}" as="h" hint-placeholder-count="4">
+<div style="position:relative;height:72px">
+<sc-if value="{{ h.showLeft }}"><div style="position:absolute;left:0;top:0;bottom:0;display:flex;gap:8px">
+<button onClick="{{ h.actView }}" style="width:62px;height:72px;border-radius:18px;border:none;background:var(--soft);color:var(--pt);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:12px;font-weight:700;cursor:pointer"><i class="ph ph-eye" style="font-size:22px;line-height:1;display:block"></i>Voir</button>
+<button onClick="{{ h.actDone }}" style="width:62px;height:72px;border-radius:18px;border:none;background:#1877C9;color:#FFFFFF;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:12px;font-weight:700;cursor:pointer"><i class="ph-bold ph-check" style="font-size:22px;line-height:1;display:block"></i>Fait</button>
+</div></sc-if>
+<sc-if value="{{ h.showRight }}"><div style="position:absolute;right:0;top:0;bottom:0;display:flex;gap:8px">
+<button onClick="{{ h.actFail }}" style="width:62px;height:72px;border-radius:18px;border:none;background:#6D3FD6;color:#FFFFFF;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:12px;font-weight:700;cursor:pointer"><i class="ph-bold ph-x" style="font-size:22px;line-height:1;display:block"></i>Échec</button>
+<button onClick="{{ h.actSkip }}" style="width:62px;height:72px;border-radius:18px;border:none;background:var(--track);color:var(--text);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:12px;font-weight:700;cursor:pointer"><i class="ph-bold ph-caret-double-right" style="font-size:22px;line-height:1;display:block"></i>Passer</button>
+</div></sc-if>
+<div onPointerDown="{{ h.onDown }}" onPointerMove="{{ h.onMove }}" onPointerUp="{{ h.onUp }}" onPointerCancel="{{ h.onUp }}" style="position:absolute;inset:0;transform:translateX({{ h.off }}px);transition:{{ h.trans }};background:{{ h.bg }};opacity:{{ h.op }};border:1px solid var(--border);border-radius:20px;display:flex;align-items:center;gap:12px;padding:0 14px;touch-action:pan-y;user-select:none;cursor:grab">
+<div style="position:relative;width:44px;height:44px;flex-shrink:0">
+<svg width="44" height="44" viewBox="0 0 44 44" style="transform:rotate(-90deg)"><circle cx="22" cy="22" r="18" fill="none" stroke="var(--track)" stroke-width="3.5"></circle><circle cx="22" cy="22" r="18" fill="none" stroke="{{ h.ring }}" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="{{ h.dash }}"></circle></svg>
+<span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:18px"><img src="{{ h.emoji }}" alt="" style="width:24px;height:24px;display:block;object-fit:contain"></span>
+</div>
+<div style="display:flex;flex-direction:column;flex:1;min-width:0;gap:2px"><span style="font-size:16px;font-weight:600;color:var(--text)">{{ h.name }}</span><span style="font-size:12px;font-weight:600;letter-spacing:0.3px;color:{{ h.subColor }}">{{ h.sub }}</span></div>
+<sc-if value="{{ h.isAdd }}"><button onClick="{{ h.onAdd }}" aria-label="Ajouter" style="width:44px;height:44px;border-radius:14px;border:1px solid var(--border);background:var(--card);color:var(--text);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0" style-active="background:var(--soft)"><i class="ph-bold ph-plus" style="font-size:22px;line-height:1;display:block"></i></button></sc-if>
+<sc-if value="{{ h.isDone }}"><button onClick="{{ h.onReset }}" aria-label="Annuler" style="width:44px;height:44px;border-radius:14px;border:none;background:var(--success-soft);color:var(--success-text);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0"><i class="ph-bold ph-check" style="font-size:22px;line-height:1;display:block"></i></button></sc-if>
+<sc-if value="{{ h.isFail }}"><button onClick="{{ h.onReset }}" aria-label="Annuler" style="width:44px;height:44px;border-radius:14px;border:none;background:var(--error-soft);color:var(--error-text);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0"><i class="ph-bold ph-x" style="font-size:22px;line-height:1;display:block"></i></button></sc-if>
+<sc-if value="{{ h.isSkip }}"><button onClick="{{ h.onReset }}" aria-label="Annuler" style="width:44px;height:44px;border-radius:14px;border:none;background:var(--track);color:var(--text2);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0"><i class="ph-bold ph-caret-double-right" style="font-size:22px;line-height:1;display:block"></i></button></sc-if>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ is.create }}">
+<div style="position:absolute;inset:0;overflow-y:auto;padding:62px 20px 130px;display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;align-items:center;gap:14px;margin-bottom:10px"><button aria-label="Retour" style="width:48px;height:48px;border-radius:16px;border:1px solid var(--border);background:var(--card);color:var(--text);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0"><i class="ph ph-caret-left" style="font-size:22px;line-height:1;display:block"></i></button><span style="font-size:24px;font-weight:700;letter-spacing:-0.3px">Nouvelle habitude</span></div>
+<span style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text2)">NOM</span>
+<div style="height:56px;border-radius:16px;border:2px solid #3843FF;background:var(--card);display:flex;align-items:center;padding:0 16px;font-size:16px;font-weight:500">Boire de l'eau<span style="width:2px;height:20px;background:#3843FF;margin-left:2px"></span></div>
+<span style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text2);margin-top:10px">ICÔNE &amp; COULEUR</span>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:14px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:center;gap:12px"><span style="width:48px;height:48px;border-radius:14px;background:var(--t-teal);display:flex;align-items:center;justify-content:center;font-size:24px"><img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Droplet/3D/droplet_3d.png" alt="" style="width:1.2em;height:1.2em;display:inline-block;vertical-align:-0.25em;object-fit:contain"></span><div style="display:flex;flex-direction:column;flex:1"><span style="font-size:16px;font-weight:600">Goutte d'eau</span><span style="font-size:12px;color:var(--text2)">Touchez pour changer d'icône</span></div><i class="ph ph-caret-right" style="font-size:22px;line-height:1;display:block;color:var(--text2)"></i></div>
+<div style="display:flex;justify-content:space-between">
+<sc-for list="{{ colors }}" as="c" hint-placeholder-count="6"><button onClick="{{ c.onClick }}" aria-label="Couleur" style="width:44px;height:44px;border:none;background:transparent;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0"><span style="width:30px;height:30px;border-radius:50%;background:{{ c.c }};box-shadow:{{ c.ring }}"></span></button></sc-for>
+</div>
+</div>
+<span style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text2);margin-top:10px">OBJECTIF</span>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:12px 14px;display:flex;align-items:center;gap:10px">
+<button aria-label="Moins" style="width:44px;height:44px;border-radius:14px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:22px;cursor:pointer">−</button>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center"><span style="font-size:20px;font-weight:700">2 000</span><span style="font-size:12px;color:var(--text2)">fois par jour</span></div>
+<button aria-label="Plus" style="width:44px;height:44px;border-radius:14px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:22px;cursor:pointer">+</button>
+<button style="height:44px;padding:0 12px;border-radius:14px;border:none;background:var(--soft);color:var(--pt);font-size:14px;font-weight:700;display:flex;align-items:center;gap:6px;cursor:pointer">ML<i class="ph-bold ph-caret-down" style="font-size:15px;line-height:1;display:block"></i></button>
+</div>
+<span style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text2);margin-top:10px">FRÉQUENCE</span>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:12px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;background:var(--track);border-radius:14px;padding:4px;height:44px"><sc-for list="{{ segFreq }}" as="o" hint-placeholder-count="3"><button onClick="{{ o.onClick }}" style="flex:1;border:none;border-radius:11px;background:{{ o.bg }};color:{{ o.color }};box-shadow:{{ o.shadow }};font-size:14px;font-weight:{{ o.weight }};cursor:pointer">{{ o.label }}</button></sc-for></div>
+<div style="display:flex;justify-content:space-between"><sc-for list="{{ weekdays }}" as="w" hint-placeholder-count="7"><button onClick="{{ w.onClick }}" style="width:42px;height:44px;border-radius:14px;border:none;background:{{ w.bg }};color:{{ w.color }};font-size:14px;font-weight:700;cursor:pointer;padding:0">{{ w.l }}</button></sc-for></div>
+</div>
+<span style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text2);margin-top:10px">RAPPEL</span>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:4px 14px;display:flex;flex-direction:column">
+<div style="display:flex;align-items:center;justify-content:space-between;min-height:56px;border-bottom:1px solid var(--border)"><span style="font-size:16px;font-weight:500">Me le rappeler</span><button onClick="{{ tRemind.onClick }}" aria-label="Rappel" style="width:51px;height:31px;border-radius:16px;border:none;background:{{ tRemind.bg }};position:relative;cursor:pointer;padding:0;transition:background .2s"><span style="position:absolute;top:2px;left:{{ tRemind.left }};width:27px;height:27px;border-radius:50%;background:#FFFFFF;transition:left .2s"></span></button></div>
+<div style="display:flex;align-items:center;justify-content:space-between;min-height:56px"><span style="font-size:16px;font-weight:500">Heure</span><span style="height:36px;padding:0 12px;border-radius:10px;background:var(--track);display:flex;align-items:center;font-size:16px;font-weight:600">08:00</span></div>
+</div>
+<span style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text2);margin-top:10px">TYPE</span>
+<div style="display:flex;background:var(--track);border-radius:14px;padding:4px;height:48px"><sc-for list="{{ segType }}" as="o" hint-placeholder-count="2"><button onClick="{{ o.onClick }}" style="flex:1;border:none;border-radius:11px;background:{{ o.bg }};color:{{ o.color }};box-shadow:{{ o.shadow }};font-size:14px;font-weight:{{ o.weight }};cursor:pointer">{{ o.label }}</button></sc-for></div>
+</div>
+<div style="position:absolute;left:0;right:0;bottom:0;padding:24px 20px 36px;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,var(--bg) 35%)"><button style="width:100%;height:56px;border-radius:28px;border:none;background:#3843FF;color:#FFFFFF;font-size:16px;font-weight:700;cursor:pointer;" style-active="background:#2A33D9">Enregistrer l'habitude</button></div>
+</sc-if>
+
+<sc-if value="{{ is.challenge }}">
+<div style="position:absolute;inset:0;overflow-y:auto">
+<div style="background:radial-gradient(110% 80% at 0% 0%,#7B80FF 0%,rgba(123,128,255,0) 60%),linear-gradient(155deg,#3843FF 0%,#0000FF 100%);color:#FFFFFF;padding:62px 20px 56px;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between"><button aria-label="Retour" style="width:48px;height:48px;border-radius:16px;border:none;background:rgba(255,255,255,0.18);color:#FFFFFF;display:flex;align-items:center;justify-content:center;cursor:pointer"><i class="ph ph-caret-left" style="font-size:22px;line-height:1;display:block"></i></button><button style="height:48px;padding:0 16px;border-radius:16px;border:none;background:rgba(255,255,255,0.18);color:#FFFFFF;font-size:14px;font-weight:600;cursor:pointer">Modifier</button></div>
+<span style="width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;font-size:36px;margin-top:18px"><img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Books/3D/books_3d.png" alt="" style="width:1.2em;height:1.2em;display:inline-block;vertical-align:-0.25em;object-fit:contain"></span>
+<span style="font-size:10px;font-weight:700;letter-spacing:1px;margin-top:16px">DÉFI PERSONNEL · 30 JOURS</span>
+<span style="font-size:32px;font-weight:800;letter-spacing:-0.5px;margin-top:4px">Lire 30 jours</span>
+<span style="font-size:14px;color:rgba(255,255,255,0.9);margin-top:4px">Au moins 20 pages chaque jour, pendant un mois.</span>
+<div style="display:flex;justify-content:space-between;margin-top:20px;font-size:14px;font-weight:600"><span>Jour 12 / 30</span><span>40 %</span></div>
+<div style="height:8px;border-radius:4px;background:rgba(255,255,255,0.25);margin-top:8px;overflow:hidden"><div style="width:40%;height:100%;border-radius:4px;background:#FFFFFF"></div></div>
+</div>
+<div style="background:var(--bg);border-radius:32px 32px 0 0;margin-top:-28px;padding:22px 20px 40px;display:flex;flex-direction:column;gap:10px;position:relative">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:18px;font-weight:600">Calendrier</span><span style="font-size:12px;color:var(--text2)">9 réussis · 2 manqués</span></div>
+<div style="display:grid;grid-template-columns:repeat(10,1fr);gap:5px;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:12px">
+<sc-for list="{{ cal }}" as="c" hint-placeholder-count="30"><span style="aspect-ratio:1;border-radius:8px;background:{{ c.bg }};color:{{ c.color }};border:{{ c.border }};display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700">{{ c.n }}</span></sc-for>
+</div>
+<span style="font-size:18px;font-weight:600;margin-top:10px">Tâches du jour</span>
+<sc-for list="{{ tasks }}" as="t" hint-placeholder-count="3">
+<button onClick="{{ t.onClick }}" style="min-height:64px;border-radius:20px;border:1px solid var(--border);background:var(--card);display:flex;align-items:center;gap:12px;padding:0 14px;cursor:pointer;text-align:left;color:var(--text)">
+<sc-if value="{{ t.isDone }}"><span style="width:28px;height:28px;border-radius:9px;background:#3843FF;display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ph-bold ph-check" style="font-size:18px;line-height:1;display:block;color:#FFFFFF"></i></span></sc-if>
+<sc-if value="{{ t.isTodo }}"><span style="width:28px;height:28px;border-radius:9px;border:2px solid var(--text3);flex-shrink:0"></span></sc-if>
+<sc-if value="{{ t.isFail }}"><span style="width:28px;height:28px;border-radius:9px;background:var(--error-soft);color:var(--error-text);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ph-bold ph-x" style="font-size:18px;line-height:1;display:block"></i></span></sc-if>
+<span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:16px;font-weight:600;color:{{ t.color }};text-decoration:{{ t.deco }}">{{ t.label }}</span><span style="font-size:12px;color:{{ t.subColor }}">{{ t.sub }}</span></span>
+</button>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ is.activity }}">
+<div style="position:absolute;inset:0;overflow-y:auto;padding:62px 20px 130px;display:flex;flex-direction:column;gap:14px">
+<span style="font-size:24px;font-weight:700;letter-spacing:-0.3px">Activité</span>
+<div style="display:flex;background:var(--track);border-radius:14px;padding:4px;height:44px"><sc-for list="{{ segRange }}" as="o" hint-placeholder-count="3"><button onClick="{{ o.onClick }}" style="flex:1;border:none;border-radius:11px;background:{{ o.bg }};color:{{ o.color }};box-shadow:{{ o.shadow }};font-size:14px;font-weight:{{ o.weight }};cursor:pointer">{{ o.label }}</button></sc-for></div>
+<div style="display:flex;align-items:center;justify-content:space-between">
+<button aria-label="Période précédente" style="width:44px;height:44px;border-radius:14px;border:1px solid var(--border);background:var(--card);color:var(--text);display:flex;align-items:center;justify-content:center;cursor:pointer"><i class="ph ph-caret-left" style="font-size:20px;line-height:1;display:block"></i></button>
+<div style="display:flex;flex-direction:column;align-items:center"><span style="font-size:16px;font-weight:600">28 sept – 4 oct</span><span style="font-size:12px;color:var(--text2)">Cette semaine</span></div>
+<button aria-label="Période suivante" disabled style="width:44px;height:44px;border-radius:14px;border:1px solid var(--border);background:var(--card);color:var(--text3);display:flex;align-items:center;justify-content:center;opacity:0.5"><i class="ph ph-caret-right" style="font-size:20px;line-height:1;display:block"></i></button>
+</div>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:14px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px">
+<div style="border-radius:14px;background:var(--bg);padding:10px;display:flex;flex-direction:column;gap:6px"><span style="width:28px;height:28px;border-radius:9px;background:var(--soft);color:var(--pt);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ph ph-target" style="font-size:18px;line-height:1;display:block"></i></span><span style="font-size:20px;font-weight:700">78 %</span><span style="font-size:12px;color:var(--text2);line-height:1.2">Taux de réussite</span></div>
+<div style="border-radius:14px;background:var(--bg);padding:10px;display:flex;flex-direction:column;gap:6px"><span style="width:28px;height:28px;border-radius:9px;background:var(--success-soft);color:var(--success-text);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ph ph-check-circle" style="font-size:18px;line-height:1;display:block"></i></span><span style="font-size:20px;font-weight:700">22</span><span style="font-size:12px;color:var(--text2);line-height:1.2">Complétées</span></div>
+<div style="border-radius:14px;background:var(--bg);padding:10px;display:flex;flex-direction:column;gap:6px"><span style="width:28px;height:28px;border-radius:9px;background:var(--soft);color:var(--pt);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ph ph-star" style="font-size:18px;line-height:1;display:block"></i></span><span style="font-size:20px;font-weight:700">1 240</span><span style="font-size:12px;color:var(--text2);line-height:1.2">Points</span></div>
+<div style="border-radius:14px;background:var(--bg);padding:10px;display:flex;flex-direction:column;gap:6px"><span style="width:28px;height:28px;border-radius:9px;background:var(--soft);color:var(--pt);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ph ph-fire" style="font-size:18px;line-height:1;display:block"></i></span><span style="font-size:20px;font-weight:700">9 j</span><span style="font-size:12px;color:var(--text2);line-height:1.2">Meilleure série</span></div>
+<div style="border-radius:14px;background:var(--bg);padding:10px;display:flex;flex-direction:column;gap:6px"><span style="width:28px;height:28px;border-radius:9px;background:var(--track);color:var(--text2);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ph-bold ph-caret-double-right" style="font-size:18px;line-height:1;display:block"></i></span><span style="font-size:20px;font-weight:700">3</span><span style="font-size:12px;color:var(--text2);line-height:1.2">Passées</span></div>
+<div style="border-radius:14px;background:var(--bg);padding:10px;display:flex;flex-direction:column;gap:6px"><span style="width:28px;height:28px;border-radius:9px;background:var(--error-soft);color:var(--error-text);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ph ph-x-circle" style="font-size:18px;line-height:1;display:block"></i></span><span style="font-size:20px;font-weight:700">2</span><span style="font-size:12px;color:var(--text2);line-height:1.2">Échouées</span></div>
+</div>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:18px;font-weight:600">Évolution</span><span style="font-size:12px;color:var(--text2)">Réussite par jour</span></div>
+<div style="position:relative;height:140px">
+<svg width="310" height="140" viewBox="0 0 310 140" style="position:absolute;inset:0;overflow:visible"><defs><linearGradient id="ar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3843FF" stop-opacity="0.22"></stop><stop offset="1" stop-color="#3843FF" stop-opacity="0"></stop></linearGradient></defs><path d="{{ curve.area }}" fill="url(#ar)"></path><path d="{{ curve.d }}" fill="none" stroke="#3843FF" stroke-width="3" stroke-linecap="round"></path><circle cx="{{ curve.hx }}" cy="{{ curve.hy }}" r="6" fill="#FFFFFF" stroke="#3843FF" stroke-width="3"></circle></svg>
+<div style="position:absolute;left:{{ curve.popL }}px;top:{{ curve.popT }}px;width:88px;padding:6px 8px;border-radius:12px;background:var(--text);color:var(--bg);display:flex;flex-direction:column;align-items:center"><span style="font-size:10px;font-weight:700;letter-spacing:0.5px">JEU 1 OCT</span><span style="font-size:14px;font-weight:700">86 % · 4/5</span></div>
+</div>
+<div style="display:flex;justify-content:space-between;padding:0 6px;font-size:12px;color:var(--text2);font-weight:600"><span>L</span><span>M</span><span>M</span><span style="color:var(--pt)">J</span><span>V</span><span>S</span><span>D</span></div>
+</div>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:center"><div style="display:flex;flex-direction:column"><span style="font-size:18px;font-weight:600">Humeur moyenne</span><span style="font-size:12px;color:var(--text2)">6 jours renseignés</span></div><span style="display:flex;align-items:center;gap:6px;font-size:14px;font-weight:600;background:var(--soft);color:var(--pt);padding:6px 10px;border-radius:12px"><img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Slightly%20smiling%20face/3D/slightly_smiling_face_3d.png" alt="" style="width:1.2em;height:1.2em;display:inline-block;vertical-align:-0.25em;object-fit:contain"> Plutôt bien</span></div>
+<div style="display:flex;gap:10px;height:120px;align-items:flex-end">
+<sc-for list="{{ mood }}" as="m" hint-placeholder-count="7"><div style="flex:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px"><span style="height:22px;display:flex;align-items:center"><img src="{{ m.e }}" alt="" style="width:22px;height:22px;display:block;object-fit:contain"></span><span style="width:100%;height:{{ m.hh }};border-radius:8px;background:{{ m.bg }}"></span><span style="font-size:12px;color:var(--text2);font-weight:600">{{ m.d }}</span></div></sc-for>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ is.success }}">
+<div style="position:absolute;inset:0;background:#FFC247;overflow:hidden">
+<div style="position:absolute;left:-200px;right:-200px;top:-140px;height:820px;background:repeating-conic-gradient(from 0deg at 50% 50%,rgba(255,255,255,0.26) 0deg 9deg,rgba(255,255,255,0) 9deg 30deg);-webkit-mask-image:radial-gradient(circle at 50% 50%,#000 0%,rgba(0,0,0,0) 60%);mask-image:radial-gradient(circle at 50% 50%,#000 0%,rgba(0,0,0,0) 60%)"></div>
+<button aria-label="Fermer" style="position:absolute;left:20px;top:62px;width:48px;height:48px;border-radius:16px;border:none;background:#FFFFFF;color:#040415;display:flex;align-items:center;justify-content:center;cursor:pointer"><i class="ph ph-caret-left" style="font-size:22px;line-height:1;display:block"></i></button>
+<div style="position:absolute;left:50%;top:184px;width:156px;height:178px;margin-left:-78px;border-radius:44px 44px 78px 78px;background:linear-gradient(160deg,#FFE680 0%,#FFC400 70%);border:10px solid #FFD52E;display:flex;flex-direction:column;align-items:center;justify-content:center">
+<span style="font-size:72px;font-weight:800;line-height:1;color:#C47800">7</span><span style="font-size:12px;font-weight:800;letter-spacing:2px;color:#C47800">JOURS</span>
+</div>
+<div style="position:absolute;left:24px;right:24px;bottom:36px;display:flex;flex-direction:column;align-items:center;text-align:center;color:#040415">
+<span style="font-size:10px;font-weight:700;letter-spacing:1px;background:#FFFFFF;padding:5px 10px;border-radius:8px">NOUVEAU BADGE</span>
+<span style="font-size:30px;line-height:1.15;font-weight:800;letter-spacing:-0.5px;margin-top:14px;text-wrap:balance">Bravo ! Ta première série de 7 jours</span>
+<span style="font-size:16px;line-height:1.45;margin-top:10px;color:#3D2F05;text-wrap:pretty">Une semaine complète de « Boire de l'eau ». Ce badge rejoint ta collection — continue sur ta lancée.</span>
+<button style="width:100%;height:56px;border-radius:28px;border:none;background:#FFFFFF;color:#040415;font-size:16px;font-weight:700;margin-top:28px;cursor:pointer" style-active="background:#FFF4D6">Continuer</button>
+<button style="height:44px;margin-top:4px;border:none;background:transparent;color:#040415;font-size:14px;font-weight:600;cursor:pointer">Voir mes statistiques</button>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ is.settings }}">
+<div style="position:absolute;inset:0;overflow-y:auto;padding:62px 20px 130px;display:flex;flex-direction:column;gap:8px">
+<span style="font-size:24px;font-weight:700;letter-spacing:-0.3px;margin-bottom:10px">Réglages</span>
+<span style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text2)">APPARENCE</span>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:14px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;gap:12px"><span style="width:36px;height:36px;border-radius:10px;background:var(--soft);color:var(--pt);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ph ph-moon" style="font-size:20px;line-height:1;display:block"></i></span><span style="font-size:16px;font-weight:500">Thème</span></div>
+<div style="display:flex;background:var(--track);border-radius:14px;padding:4px;height:44px"><sc-for list="{{ segTheme }}" as="o" hint-placeholder-count="3"><button onClick="{{ o.onClick }}" style="flex:1;border:none;border-radius:11px;background:{{ o.bg }};color:{{ o.color }};box-shadow:{{ o.shadow }};font-size:14px;font-weight:{{ o.weight }};cursor:pointer">{{ o.label }}</button></sc-for></div>
+</div>
+<span style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text2);margin-top:12px">RETOURS</span>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:0 14px;display:flex;flex-direction:column">
+<div style="display:flex;align-items:center;gap:12px;min-height:60px;border-bottom:1px solid var(--border)"><span style="width:36px;height:36px;border-radius:10px;background:var(--soft);color:var(--pt);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ph ph-speaker-high" style="font-size:20px;line-height:1;display:block"></i></span><span style="font-size:16px;font-weight:500;flex:1">Sons</span><button onClick="{{ tSound.onClick }}" aria-label="Sons" style="width:51px;height:31px;border-radius:16px;border:none;background:{{ tSound.bg }};position:relative;cursor:pointer;padding:0;transition:background .2s"><span style="position:absolute;top:2px;left:{{ tSound.left }};width:27px;height:27px;border-radius:50%;background:#FFFFFF;transition:left .2s"></span></button></div>
+<div style="display:flex;align-items:center;gap:12px;min-height:60px"><span style="width:36px;height:36px;border-radius:10px;background:var(--soft);color:var(--pt);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ph ph-vibrate" style="font-size:20px;line-height:1;display:block"></i></span><span style="font-size:16px;font-weight:500;flex:1">Vibrations</span><button onClick="{{ tVib.onClick }}" aria-label="Vibrations" style="width:51px;height:31px;border-radius:16px;border:none;background:{{ tVib.bg }};position:relative;cursor:pointer;padding:0;transition:background .2s"><span style="position:absolute;top:2px;left:{{ tVib.left }};width:27px;height:27px;border-radius:50%;background:#FFFFFF;transition:left .2s"></span></button></div>
+</div>
+<span style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text2);margin-top:12px">DONNÉES</span>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:0 14px;display:flex;flex-direction:column">
+<button style="display:flex;align-items:center;gap:12px;min-height:64px;border:none;border-bottom:1px solid var(--border);background:transparent;padding:0;cursor:pointer;text-align:left;color:var(--text)"><span style="width:36px;height:36px;border-radius:10px;background:var(--soft);color:var(--pt);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ph ph-upload-simple" style="font-size:20px;line-height:1;display:block"></i></span><span style="display:flex;flex-direction:column;flex:1"><span style="font-size:16px;font-weight:500">Exporter en JSON</span><span style="font-size:12px;color:var(--text2)">routiner-2026-10-03.json</span></span><i class="ph ph-caret-right" style="font-size:22px;line-height:1;display:block;color:var(--text2)"></i></button>
+<button style="display:flex;align-items:center;gap:12px;min-height:64px;border:none;background:transparent;padding:0;cursor:pointer;text-align:left;color:var(--text)"><span style="width:36px;height:36px;border-radius:10px;background:var(--soft);color:var(--pt);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ph ph-download-simple" style="font-size:20px;line-height:1;display:block"></i></span><span style="display:flex;flex-direction:column;flex:1"><span style="font-size:16px;font-weight:500">Importer un JSON</span><span style="font-size:12px;color:var(--text2)">Remplace les données actuelles</span></span><i class="ph ph-caret-right" style="font-size:22px;line-height:1;display:block;color:var(--text2)"></i></button>
+</div>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:0 14px;margin-top:12px">
+<button style="display:flex;align-items:center;gap:12px;min-height:64px;width:100%;border:none;background:transparent;padding:0;cursor:pointer;text-align:left"><span style="width:36px;height:36px;border-radius:10px;background:var(--error-soft);color:var(--error-text);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ph ph-trash" style="font-size:20px;line-height:1;display:block"></i></span><span style="display:flex;flex-direction:column;flex:1"><span style="font-size:16px;font-weight:600;color:var(--error-text)">Réinitialiser l'app</span><span style="font-size:12px;color:var(--text2)">Efface habitudes, défis et historique</span></span></button>
+</div>
+<span style="font-size:12px;color:var(--text2);text-align:center;margin-top:12px">Routiner 1.0 · données stockées sur cet appareil</span>
+</div>
+</sc-if>
+
+<sc-if value="{{ is.dim }}"><div onClick="{{ closeOverlay }}" style="position:absolute;inset:0;background:var(--dim);z-index:30"></div></sc-if>
+
+<sc-if value="{{ is.plus }}">
+<div style="position:absolute;left:16px;right:16px;bottom:112px;z-index:35;display:flex;flex-direction:column;gap:10px">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+<button style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:14px;display:flex;flex-direction:column;align-items:flex-start;gap:8px;text-align:left;cursor:pointer;color:var(--text)" style-active="background:var(--soft)"><span style="width:40px;height:40px;border-radius:10px;background:var(--error-soft);color:var(--error-text);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ph ph-prohibit" style="font-size:20px;line-height:1;display:block"></i></span><span style="font-size:16px;font-weight:600">Mauvaise habitude</span><span style="font-size:12px;color:var(--text2)">Pour arrêter</span></button>
+<button style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:14px;display:flex;flex-direction:column;align-items:flex-start;gap:8px;text-align:left;cursor:pointer;color:var(--text)" style-active="background:var(--soft)"><span style="width:40px;height:40px;border-radius:10px;background:var(--success-soft);color:var(--success-text);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ph ph-trend-up" style="font-size:20px;line-height:1;display:block"></i></span><span style="font-size:16px;font-weight:600">Bonne habitude</span><span style="font-size:12px;color:var(--text2)">Pour construire</span></button>
+</div>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:14px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:16px;font-weight:600">Humeur du jour</span><span style="font-size:12px;color:var(--text2)">{{ moodLabel }}</span></div>
+<div style="display:flex;justify-content:space-between">
+<sc-for list="{{ moods }}" as="m" hint-placeholder-count="5"><button onClick="{{ m.onClick }}" aria-label="{{ m.label }}" style="width:56px;height:56px;border-radius:16px;border:{{ m.border }};background:{{ m.bg }};cursor:pointer;padding:0;display:flex;align-items:center;justify-content:center"><img src="{{ m.e }}" alt="" style="width:34px;height:34px;display:block;object-fit:contain"></button></sc-for>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ is.popular }}">
+<div style="position:absolute;left:0;right:0;bottom:0;z-index:35;background:var(--card);border-radius:32px 32px 0 0;padding:12px 0 44px;display:flex;flex-direction:column">
+<span style="align-self:center;width:40px;height:5px;border-radius:3px;background:var(--track)"></span>
+<span style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text2);margin:18px 20px 10px">NOUVELLE BONNE HABITUDE</span>
+<div style="margin:0 20px;border:1px solid var(--border);border-radius:20px;padding:0 12px 0 16px;height:72px;display:flex;align-items:center;justify-content:space-between;background:var(--card)"><span style="font-size:16px;font-weight:600">Créer une habitude perso</span><button aria-label="Créer" style="width:44px;height:44px;border-radius:14px;border:1px solid var(--border);background:var(--card);color:var(--text);display:flex;align-items:center;justify-content:center;cursor:pointer"><i class="ph-bold ph-plus" style="font-size:22px;line-height:1;display:block"></i></button></div>
+<span style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text2);margin:20px 20px 10px">HABITUDES POPULAIRES</span>
+<div style="display:flex;gap:10px;overflow-x:auto;padding:0 20px">
+<sc-for list="{{ populars }}" as="p" hint-placeholder-count="4">
+<button style="flex:0 0 132px;height:144px;border-radius:20px;border:none;background:{{ p.tint }};padding:14px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;cursor:pointer;text-align:left;color:var(--text)" style-active="opacity:0.85">
+<span style="width:40px;height:40px;border-radius:12px;background:var(--card);display:flex;align-items:center;justify-content:center;font-size:20px"><img src="{{ p.emoji }}" alt="" style="width:30px;height:30px;display:block;object-fit:contain"></span>
+<span style="display:flex;flex-direction:column"><span style="font-size:16px;font-weight:600">{{ p.name }}</span><span style="font-size:12px;color:var(--text2)">{{ p.sub }}</span></span>
+</button>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ is.nav }}">
+<div style="position:absolute;left:16px;right:16px;bottom:24px;height:72px;border-radius:36px;background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 8px;z-index:40">
+<button aria-label="Accueil" style="width:60px;height:56px;border:none;background:transparent;color:{{ nav.home }};display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;border-radius:16px"><i class="{{ nav.homeCls }} ph-house" style="font-size:26px;line-height:1;display:block"></i><span style="font-size:10px;font-weight:700">Accueil</span></button>
+<button aria-label="Modèles" style="width:60px;height:56px;border:none;background:transparent;color:{{ nav.tpl }};display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;border-radius:16px"><i class="{{ nav.tplCls }} ph-squares-four" style="font-size:26px;line-height:1;display:block"></i><span style="font-size:10px;font-weight:700">Modèles</span></button>
+<button onClick="{{ togglePlus }}" aria-label="Ajouter" style="width:60px;height:60px;border-radius:50%;border:none;background:linear-gradient(145deg,#5A63FF 0%,#3843FF 45%,#0000FF 100%);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0"><i class="ph-bold ph-plus" style="font-size:29px;line-height:1;display:block;color:#FFFFFF;transform:rotate({{ plusRot }}deg);transition:transform .2s"></i></button>
+<button aria-label="Activité" style="width:60px;height:56px;border:none;background:transparent;color:{{ nav.act }};display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;border-radius:16px"><i class="{{ nav.actCls }} ph-chart-bar" style="font-size:26px;line-height:1;display:block"></i><span style="font-size:10px;font-weight:700">Activité</span></button>
+<button aria-label="Réglages" style="width:60px;height:56px;border:none;background:transparent;color:{{ nav.set }};display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;border-radius:16px"><i class="{{ nav.setCls }} ph-gear-six" style="font-size:26px;line-height:1;display:block"></i><span style="font-size:10px;font-weight:700">Réglages</span></button>
+</div>
+</sc-if>
+
+<div style="position:absolute;top:0;left:0;right:0;height:54px;display:flex;align-items:center;justify-content:space-between;padding:4px 30px 0 44px;z-index:50;color:{{ sbColor }};pointer-events:none">
+<span style="font-weight:600;font-size:16px">9:41</span>
+<div style="position:absolute;left:50%;top:11px;transform:translateX(-50%);width:124px;height:36px;border-radius:20px;background:#000000"></div>
+<div style="display:flex;gap:7px;align-items:center">
+<div style="display:flex;gap:2px;align-items:flex-end;height:11px"><span style="width:3px;height:4px;border-radius:1px;background:currentColor"></span><span style="width:3px;height:6px;border-radius:1px;background:currentColor"></span><span style="width:3px;height:8px;border-radius:1px;background:currentColor"></span><span style="width:3px;height:11px;border-radius:1px;background:currentColor"></span></div>
+<div style="width:25px;height:12px;border-radius:4px;border:1.5px solid currentColor;padding:1.5px;opacity:0.9"><div style="width:80%;height:100%;border-radius:2px;background:currentColor"></div></div>
+</div>
+</div>
+<div style="position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:134px;height:5px;border-radius:3px;background:{{ sbColor }};z-index:50"></div>
+</div>
+</sc-if>
+<sc-if value="{{ is.components }}">
+<div style="width:1180px;background:var(--bg);color:var(--text);font-family:'Figtree',system-ui,sans-serif;padding:40px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;-webkit-font-smoothing:antialiased">
+<div style="grid-column:1 / -1;display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:32px;font-weight:800;letter-spacing:-0.5px">{{ compTitle }}</span><span style="font-size:14px;color:var(--text2)">Zones tactiles ≥ 44 px · textes AA</span></div>
+
+<div style="background:var(--card);border:1px solid var(--border);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:16px">
+<span style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text2)">BOUTONS</span>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:8px"><button style="height:56px;border-radius:28px;border:none;background:#3843FF;color:#FFFFFF;font-size:16px;font-weight:700">Continuer</button><span style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--text2)">DEFAULT</span></div>
+<div style="display:flex;flex-direction:column;gap:8px"><button style="height:56px;border-radius:28px;border:none;background:#2A33D9;color:#FFFFFF;font-size:16px;font-weight:700;transform:scale(0.97)">Continuer</button><span style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--text2)">PRESSED</span></div>
+<div style="display:flex;flex-direction:column;gap:8px"><button disabled style="height:56px;border-radius:28px;border:none;background:#AFB4FF;color:#FFFFFF;font-size:16px;font-weight:700;opacity:0.8">Continuer</button><span style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--text2)">DISABLED</span></div>
+<div style="display:flex;flex-direction:column;gap:8px"><button style="height:56px;border-radius:28px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:16px;font-weight:600">Annuler</button><span style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--text2)">SECONDAIRE</span></div>
+<div style="display:flex;flex-direction:column;gap:8px"><button style="height:56px;border-radius:28px;border:1px solid var(--border);background:var(--soft);color:var(--pt);font-size:16px;font-weight:600;transform:scale(0.97)">Annuler</button><span style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--text2)">PRESSED</span></div>
+<div style="display:flex;flex-direction:column;gap:8px"><button disabled style="height:56px;border-radius:28px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:16px;font-weight:600;opacity:0.4">Annuler</button><span style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--text2)">DISABLED</span></div>
+</div>
+</div>
+
+<div style="background:var(--card);border:1px solid var(--border);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:16px">
+<span style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text2)">BOUTONS ICÔNE &amp; « + » CENTRAL</span>
+<div style="display:flex;gap:22px;align-items:flex-end;flex-wrap:wrap">
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span style="width:44px;height:44px;border-radius:14px;border:1px solid var(--border);background:var(--card);display:flex;align-items:center;justify-content:center"><i class="ph-bold ph-plus" style="font-size:22px;line-height:1;display:block"></i></span><span style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--text2)">DEFAULT</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span style="width:44px;height:44px;border-radius:14px;border:1px solid #AFB4FF;background:var(--soft);color:var(--pt);display:flex;align-items:center;justify-content:center"><i class="ph-bold ph-plus" style="font-size:22px;line-height:1;display:block"></i></span><span style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--text2)">PRESSED</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span style="width:44px;height:44px;border-radius:14px;border:1px solid var(--border);background:var(--card);opacity:0.4;display:flex;align-items:center;justify-content:center"><i class="ph-bold ph-plus" style="font-size:22px;line-height:1;display:block"></i></span><span style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--text2)">DISABLED</span></div>
+<span style="width:1px;height:60px;background:var(--border)"></span>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span style="width:60px;height:60px;border-radius:50%;background:linear-gradient(145deg,#5A63FF 0%,#3843FF 45%,#0000FF 100%);display:flex;align-items:center;justify-content:center"><i class="ph-bold ph-plus" style="font-size:29px;line-height:1;display:block;color:#FFFFFF"></i></span><span style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--text2)">DEFAULT</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span style="width:60px;height:60px;border-radius:50%;background:#2A33D9;transform:scale(0.92);display:flex;align-items:center;justify-content:center"><i class="ph-bold ph-plus" style="font-size:29px;line-height:1;display:block;color:#FFFFFF"></i></span><span style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--text2)">PRESSED</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span style="width:60px;height:60px;border-radius:50%;background:linear-gradient(145deg,#5A63FF 0%,#3843FF 45%,#0000FF 100%);display:flex;align-items:center;justify-content:center"><i class="ph-bold ph-plus" style="font-size:29px;line-height:1;display:block;color:#FFFFFF;transform:rotate(45deg)"></i></span><span style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--text2)">OUVERT</span></div>
+</div>
+</div>
+
+<div style="grid-column:1 / -1;background:var(--card);border:1px solid var(--border);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:16px">
+<span style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text2)">CARTE HABITUDE</span>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 16px;background:var(--bg);border-radius:18px;padding:18px">
+<sc-for list="{{ stateCards }}" as="h" hint-placeholder-count="7">
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="height:72px;transform:{{ h.tf }};background:{{ h.bg }};opacity:{{ h.op }};border:{{ h.border }};border-radius:20px;display:flex;align-items:center;gap:12px;padding:0 14px">
+<div style="position:relative;width:44px;height:44px;flex-shrink:0"><svg width="44" height="44" viewBox="0 0 44 44" style="transform:rotate(-90deg)"><circle cx="22" cy="22" r="18" fill="none" stroke="var(--track)" stroke-width="3.5"></circle><circle cx="22" cy="22" r="18" fill="none" stroke="{{ h.ring }}" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="{{ h.dash }}"></circle></svg><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:18px"><img src="{{ h.emoji }}" alt="" style="width:24px;height:24px;display:block;object-fit:contain"></span></div>
+<div style="display:flex;flex-direction:column;flex:1;min-width:0;gap:2px"><span style="font-size:16px;font-weight:600">{{ h.name }}</span><span style="font-size:12px;font-weight:600;letter-spacing:0.3px;color:{{ h.subColor }}">{{ h.sub }}</span></div>
+<sc-if value="{{ h.isAdd }}"><span style="width:44px;height:44px;border-radius:14px;border:1px solid var(--border);background:var(--card);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ph-bold ph-plus" style="font-size:22px;line-height:1;display:block"></i></span></sc-if>
+<sc-if value="{{ h.isDone }}"><span style="width:44px;height:44px;border-radius:14px;background:var(--success-soft);color:var(--success-text);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ph-bold ph-check" style="font-size:22px;line-height:1;display:block"></i></span></sc-if>
+<sc-if value="{{ h.isFail }}"><span style="width:44px;height:44px;border-radius:14px;background:var(--error-soft);color:var(--error-text);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ph-bold ph-x" style="font-size:22px;line-height:1;display:block"></i></span></sc-if>
+<sc-if value="{{ h.isSkip }}"><span style="width:44px;height:44px;border-radius:14px;background:var(--track);color:var(--text2);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ph-bold ph-caret-double-right" style="font-size:22px;line-height:1;display:block"></i></span></sc-if>
+</div>
+<span style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--text2)">{{ h.label }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+
+<div style="background:var(--card);border:1px solid var(--border);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:16px">
+<span style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text2)">TOGGLE &amp; SEGMENTED</span>
+<div style="display:flex;gap:24px">
+<sc-for list="{{ compToggles }}" as="t" hint-placeholder-count="4"><div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span style="width:51px;height:31px;border-radius:16px;background:{{ t.bg }};position:relative;opacity:{{ t.op }}"><span style="position:absolute;top:2px;left:{{ t.left }};width:27px;height:27px;border-radius:50%;background:#FFFFFF;"></span></span><span style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--text2)">{{ t.label }}</span></div></sc-for>
+</div>
+<div style="display:flex;background:var(--track);border-radius:14px;padding:4px;height:44px"><sc-for list="{{ segRange }}" as="o" hint-placeholder-count="3"><button onClick="{{ o.onClick }}" style="flex:1;border:none;border-radius:11px;background:{{ o.bg }};color:{{ o.color }};box-shadow:{{ o.shadow }};font-size:14px;font-weight:{{ o.weight }};cursor:pointer">{{ o.label }}</button></sc-for></div>
+</div>
+
+<div style="background:var(--card);border:1px solid var(--border);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:16px">
+<span style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text2)">JOUR · CASE DE TÂCHE</span>
+<div style="display:flex;gap:16px">
+<sc-for list="{{ compDays }}" as="d" hint-placeholder-count="5"><div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span style="width:44px;height:64px;border-radius:14px;border:{{ d.border }};background:{{ d.bg }};color:{{ d.color }};display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative"><span style="font-size:18px;font-weight:700">{{ d.n }}</span><span style="font-size:10px;font-weight:700">{{ d.w }}</span><span style="position:absolute;bottom:6px;width:4px;height:4px;border-radius:2px;background:{{ d.dot }}"></span></span><span style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--text2)">{{ d.label }}</span></div></sc-for>
+</div>
+<div style="display:flex;gap:24px">
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span style="width:44px;height:44px;display:flex;align-items:center;justify-content:center"><span style="width:28px;height:28px;border-radius:9px;border:2px solid var(--text3)"></span></span><span style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--text2)">À FAIRE</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span style="width:44px;height:44px;display:flex;align-items:center;justify-content:center"><span style="width:28px;height:28px;border-radius:9px;background:#3843FF;display:flex;align-items:center;justify-content:center"><i class="ph-bold ph-check" style="font-size:18px;line-height:1;display:block;color:#FFFFFF"></i></span></span><span style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--text2)">COCHÉE</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span style="width:44px;height:44px;display:flex;align-items:center;justify-content:center"><span style="width:28px;height:28px;border-radius:9px;background:var(--error-soft);color:var(--error-text);display:flex;align-items:center;justify-content:center"><i class="ph-bold ph-x" style="font-size:18px;line-height:1;display:block"></i></span></span><span style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--text2)">ÉCHEC</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span style="width:44px;height:44px;display:flex;align-items:center;justify-content:center"><span style="width:28px;height:28px;border-radius:9px;background:var(--track);color:var(--text2);display:flex;align-items:center;justify-content:center"><i class="ph-bold ph-caret-double-right" style="font-size:18px;line-height:1;display:block"></i></span></span><span style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--text2)">PASSÉE</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span style="width:44px;height:44px;display:flex;align-items:center;justify-content:center"><span style="width:28px;height:28px;border-radius:9px;border:2px solid var(--text3);background:var(--track);opacity:0.5"></span></span><span style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--text2)">DISABLED</span></div>
+</div>
+</div>
+
+<div style="background:var(--card);border:1px solid var(--border);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:14px">
+<span style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text2)">TYPOGRAPHIE · FIGTREE</span>
+<span style="font-size:24px;font-weight:700">H5 · 24 bold — Bonjour <img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Waving%20hand/Default/3D/waving_hand_3d_default.png" alt="" style="width:1.2em;height:1.2em;display:inline-block;vertical-align:-0.25em;object-fit:contain"></span>
+<span style="font-size:20px;font-weight:500">H6 · 20 medium — Nouvelle habitude</span>
+<span style="font-size:18px;font-weight:500">Title · 18 medium — Habitudes</span>
+<span style="font-size:14px">Paragraph · 14 — Ajoute de petites habitudes chaque jour.</span>
+<span style="font-size:12px;color:var(--text2)">Caption · 12 — 500/2000 ML</span>
+<span style="font-size:10px;font-weight:700;letter-spacing:1px">CHIP · 10 BOLD CAPITALES</span>
+</div>
+
+<div style="background:var(--card);border:1px solid var(--border);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:16px">
+<span style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text2)">CHIPS</span>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<sc-for list="{{ chips }}" as="c" hint-placeholder-count="9"><span style="font-size:10px;font-weight:700;letter-spacing:0.8px;padding:6px 10px;border-radius:8px;background:{{ c.bg }};color:{{ c.color }}">{{ c.l }}</span></sc-for>
+</div>
+<span style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text2);margin-top:8px">NAVIGATION BASSE</span>
+<div style="position:relative;height:72px;border-radius:36px;background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 8px;max-width:358px">
+<span style="width:60px;display:flex;flex-direction:column;align-items:center;gap:3px;color:var(--pt)"><i class="ph-fill ph-house" style="font-size:26px;line-height:1;display:block"></i><span style="font-size:10px;font-weight:700">Accueil</span></span>
+<span style="width:60px;display:flex;flex-direction:column;align-items:center;gap:3px;color:var(--text2)"><i class="ph ph-squares-four" style="font-size:26px;line-height:1;display:block"></i><span style="font-size:10px;font-weight:700">Modèles</span></span>
+<span style="width:60px;height:60px;border-radius:50%;background:linear-gradient(145deg,#5A63FF 0%,#3843FF 45%,#0000FF 100%);display:flex;align-items:center;justify-content:center"><i class="ph-bold ph-plus" style="font-size:29px;line-height:1;display:block;color:#FFFFFF"></i></span>
+<span style="width:60px;display:flex;flex-direction:column;align-items:center;gap:3px;color:var(--text2)"><i class="ph ph-chart-bar" style="font-size:26px;line-height:1;display:block"></i><span style="font-size:10px;font-weight:700">Activité</span></span>
+<span style="width:60px;display:flex;flex-direction:column;align-items:center;gap:3px;color:var(--text2)"><i class="ph ph-gear-six" style="font-size:26px;line-height:1;display:block"></i><span style="font-size:10px;font-weight:700">Réglages</span></span>
+</div>
+</div>
+
+<div style="grid-column:1 / -1;background:var(--card);border:1px solid var(--border);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:14px">
+<span style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text2)">PALETTE</span>
+<sc-for list="{{ palette }}" as="p" hint-placeholder-count="7">
+<div style="display:grid;grid-template-columns:120px repeat(5,minmax(0,1fr));gap:8px;align-items:center"><span style="font-size:14px;font-weight:600">{{ p.name }}</span>
+<sc-for list="{{ p.shades }}" as="c"><div style="height:44px;border-radius:12px;background:{{ c.hex }};display:flex;align-items:flex-end;padding:6px 8px"><span style="font-size:10px;font-weight:700;color:{{ c.ink }}">{{ c.hex }}</span></div></sc-for>
+</div>
+</sc-for>
+</div>
+</div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:844},&quot;screen&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;splash&quot;,&quot;onb1&quot;,&quot;onb2&quot;,&quot;onb3&quot;,&quot;pick&quot;,&quot;home&quot;,&quot;swipe&quot;,&quot;plus&quot;,&quot;popular&quot;,&quot;create&quot;,&quot;challenge&quot;,&quot;activity&quot;,&quot;success&quot;,&quot;settings&quot;,&quot;components&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;dark&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { off: null, vals: {}, st: {}, picked: ['water', 'read', 'med'], mood: 3, seg: {}, tog: { sound: true, vib: false, remind: true }, tasks: { t1: 'done', t2: 'todo', t3: 'fail' }, color: 'teal', plusOpen: null, dragging: null };
+  C = 2 * Math.PI * 18;
+  scr() { return this.props.screen ?? 'home'; }
+  offs() { return this.state.off ?? (this.scr() === 'swipe' ? { water: 140, walk: -140 } : {}); }
+  base() {
+    return [
+      { id: 'water', emoji: '💧', name: "Boire de l'eau", unit: 'ML', goal: 2000, step: 250, val: 500 },
+      { id: 'walk', emoji: '🚶', name: 'Marcher', unit: 'PAS', goal: 10000, step: 1000, val: 0 },
+      { id: 'med', emoji: '🧘', name: 'Méditer', unit: 'MIN', goal: 15, step: 5, val: 15 },
+      { id: 'journal', emoji: '✍️', name: 'Journal', unit: 'PAGE', goal: 1, step: 1, val: 0 },
+    ];
+  }
+  fmt(n) { return n.toLocaleString('fr-FR').replace(/\u202f|\u00a0/g, ' '); }
+  card(b, status, val, extra) {
+    const pct = status === 'done' ? 1 : Math.min(1, val / b.goal);
+    const qty = `${this.fmt(val)}/${this.fmt(b.goal)} ${b.unit}`;
+    const sub = status === 'fail' ? `ÉCHOUÉ · ${qty}` : status === 'skip' ? "PASSÉ AUJOURD'HUI" : qty;
+    return Object.assign({
+      emoji: b.emoji, name: b.name, sub,
+      subColor: status === 'fail' ? 'var(--error-text)' : 'var(--text2)',
+      ring: status === 'done' ? '#2E9BF0' : status === 'fail' ? '#8B5CF6' : status === 'skip' ? 'var(--text3)' : '#3843FF',
+      dash: `${(pct * this.C).toFixed(1)} ${this.C.toFixed(1)}`,
+      isAdd: status === 'todo', isDone: status === 'done', isFail: status === 'fail', isSkip: status === 'skip',
+      off: 0, trans: 'transform .25s ease', bg: 'var(--card)', op: 1, showLeft: false, showRight: false,
+    }, extra || {});
+  }
+  setH(id, patch) {
+    this.setState(s => ({ vals: { ...s.vals, ...(patch.val !== undefined ? { [id]: patch.val } : {}) }, st: { ...s.st, [id]: patch.st }, off: { ...this.offs(), [id]: 0 } }));
+  }
+  habits() {
+    const off = this.offs();
+    return this.base().map(b => {
+      const val = this.state.vals[b.id] ?? b.val;
+      const status = this.state.st[b.id] || (val >= b.goal ? 'done' : 'todo');
+      const o = off[b.id] || 0;
+      return this.card(b, status, val, {
+        off: o, trans: this.state.dragging === b.id ? 'none' : 'transform .25s ease',
+        showLeft: o > 0, showRight: o < 0,
+        onAdd: () => { const v = Math.min(b.goal, val + b.step); this.setH(b.id, { val: v, st: null }); },
+        onReset: () => this.setH(b.id, { val: 0, st: null }),
+        actView: () => this.setH(b.id, { st: this.state.st[b.id] }),
+        actDone: () => this.setH(b.id, { val: b.goal, st: null }),
+        actFail: () => this.setH(b.id, { st: 'fail' }),
+        actSkip: () => this.setH(b.id, { st: 'skip' }),
+        onDown: e => { this.drag = { id: b.id, x: e.clientX, base: o, moved: false, el: e.currentTarget, pid: e.pointerId }; },
+        onMove: e => {
+          const d = this.drag; if (!d) return;
+          const dx = e.clientX - d.x;
+          if (!d.moved && Math.abs(dx) > 6) { d.moved = true; try { d.el.setPointerCapture(d.pid); } catch (_) {} }
+          if (d.moved) this.setState({ off: { ...this.offs(), [d.id]: Math.max(-150, Math.min(150, d.base + dx)) }, dragging: d.id });
+        },
+        onUp: () => {
+          const d = this.drag; this.drag = null; if (!d || !d.moved) return;
+          const v = this.offs()[d.id] || 0;
+          this.setState({ off: { ...this.offs(), [d.id]: v > 60 ? 140 : v < -60 ? -140 : 0 }, dragging: null });
+        },
+      });
+    });
+  }
+  seg(key, opts, def) {
+    const cur = this.state.seg[key] ?? def;
+    return opts.map(o => ({ label: o, bg: o === cur ? 'var(--card)' : 'transparent', color: o === cur ? 'var(--pt)' : 'var(--text2)', shadow: o === cur ? '0 0 0 1px var(--border)' : 'none', weight: o === cur ? 700 : 500, onClick: () => this.setState(s => ({ seg: { ...s.seg, [key]: o } })) }));
+  }
+  tg(key) {
+    const on = this.state.tog[key];
+    return { bg: on ? '#3843FF' : 'var(--track)', left: on ? '22px' : '2px', onClick: () => this.setState(s => ({ tog: { ...s.tog, [key]: !s.tog[key] } })) };
+  }
+  curve() {
+    const v = [62, 70, 55, 86, 74, 92, 78], W = 310, n = v.length;
+    const p = v.map((y, i) => ({ x: 14 + i * ((W - 28) / (n - 1)), y: 12 + (100 - y) / 60 * 96 }));
+    let d = `M${p[0].x},${p[0].y}`;
+    for (let i = 0; i < n - 1; i++) {
+      const p0 = p[i - 1] || p[i], p1 = p[i], p2 = p[i + 1], p3 = p[i + 2] || p2;
+      d += ` C${(p1.x + (p2.x - p0.x) / 6).toFixed(1)},${(p1.y + (p2.y - p0.y) / 6).toFixed(1)} ${(p2.x - (p3.x - p1.x) / 6).toFixed(1)},${(p2.y - (p3.y - p1.y) / 6).toFixed(1)} ${p2.x.toFixed(1)},${p2.y.toFixed(1)}`;
+    }
+    const h = p[3];
+    return { d, area: `${d} L${p[n - 1].x},140 L${p[0].x},140 Z`, hx: h.x, hy: h.y, popL: h.x - 44, popT: h.y - 62, lineH: 140 - h.y };
+  }
+  comp() {
+    const w = { emoji: '💧', name: "Boire de l'eau", unit: 'ML', goal: 2000 };
+    const r = { emoji: '📖', name: 'Lire', unit: 'PAGES', goal: 20 };
+    const def = { tf: 'none', border: '1px solid var(--border)' };
+    const stateCards = [
+      this.card(w, 'todo', 0, { ...def, label: 'DEFAULT · À FAIRE' }),
+      this.card(w, 'todo', 1250, { ...def, label: 'EN COURS' }),
+      this.card(w, 'todo', 1250, { label: 'PRESSED', bg: 'var(--soft)', border: '1px solid #AFB4FF', tf: 'scale(0.98)' }),
+      this.card(w, 'done', 2000, { ...def, label: 'COCHÉE' }),
+      this.card(r, 'fail', 6, { ...def, label: 'ÉCHEC' }),
+      this.card(r, 'skip', 0, { ...def, label: 'PASSÉE' }),
+      this.card(r, 'todo', 0, { ...def, label: 'DISABLED · EN PAUSE', op: 0.45 }),
+    ];
+    const ink = h => { const n = parseInt(h.slice(1), 16); const l = (0.299 * (n >> 16) + 0.587 * ((n >> 8) & 255) + 0.114 * (n & 255)); return l > 150 ? '#040415' : '#FFFFFF'; };
+    const pal = [['Primaire', ['#EBECFF', '#AFB4FF', '#3843FF', '#2A33D9', '#0000FF']], ['Orange', ['#FFF1E6', '#FFD4B3', '#FFAA66', '#FF7A1A', '#CC5A00']], ['Violet', ['#F1ECFF', '#D6C8FF', '#A88BFF', '#7B4DFF', '#5A2FD6']], ['Rose', ['#FFEDF3', '#FFC8DB', '#FF8FB5', '#F2558D', '#C2336A']], ['Teal', ['#E6F8F6', '#B4EBE4', '#6BD6C8', '#1FB5A3', '#138073']], ['Jaune', ['#FFF9E0', '#FFEDA3', '#FFDB4D', '#FFC21A', '#CC9200']], ['Bleu foncé', ['#E8EAF5', '#BCC2E3', '#7E88C2', '#3D4A99', '#1F2766']], ['Succès', ['#E3F3FF', '#A8D8FB', '#2E9BF0', '#1877C9', '#0B4F8A']], ['Échec', ['#F0EAFF', '#D4C4FD', '#8B5CF6', '#6D3FD6', '#4A2596']]];
+    return {
+      compTitle: this.props.dark ? 'Thème sombre' : 'Thème clair',
+      stateCards,
+      compToggles: [['ON', '#3843FF', '22px', 1], ['OFF', 'var(--track)', '2px', 1], ['DISABLED ON', '#3843FF', '22px', 0.4], ['DISABLED OFF', 'var(--track)', '2px', 0.4]].map(([label, bg, left, op]) => ({ label, bg, left, op })),
+      compDays: [['DEFAULT', '2', 'VEN', '1px solid var(--border)', 'var(--card)', 'var(--text)', 'transparent'], ["AUJOURD'HUI", '3', 'SAM', '2px solid #3843FF', 'var(--card)', 'var(--pt)', 'transparent'], ['RÉUSSI', '1', 'JEU', '1px solid var(--border)', 'var(--card)', 'var(--text)', '#2E9BF0'], ['MANQUÉ', '30', 'MER', '1px solid var(--border)', 'var(--card)', 'var(--text)', '#8B5CF6'], ['À VENIR', '4', 'DIM', '1px solid var(--border)', 'var(--track)', 'var(--text2)', 'transparent']].map(([label, n, w, border, bg, color, dot]) => ({ label, n, w, border, bg, color, dot })),
+      chips: [['SANTÉ', 'var(--t-teal)'], ['SPORT', 'var(--t-orange)'], ['LECTURE', 'var(--t-violet)'], ['BIEN-ÊTRE', 'var(--t-pink)'], ['ÉTUDES', 'var(--t-navy)'], ['MAISON', 'var(--t-yellow)']].map(([l, bg]) => ({ l, bg, color: 'var(--text)' })).concat([{ l: 'FAIT', bg: 'var(--success-soft)', color: 'var(--success-text)' }, { l: 'ÉCHOUÉ', bg: 'var(--error-soft)', color: 'var(--error-text)' }, { l: '18 J RESTANTS', bg: 'var(--warn-soft)', color: 'var(--warn-text)' }]),
+      palette: pal.map(([name, hs]) => ({ name, shades: hs.map(hex => ({ hex, ink: ink(hex) })) })),
+    };
+  }
+  EM = {"✍️":"https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Writing%20hand/Default/3D/writing_hand_3d_default.png","💧":"https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Droplet/3D/droplet_3d.png","🏃":"https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person%20running/Default/3D/person_running_3d_default.png","🚶":"https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person%20walking/Default/3D/person_walking_3d_default.png","🧘":"https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person%20in%20lotus%20position/Default/3D/person_in_lotus_position_3d_default.png","📖":"https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Open%20book/3D/open_book_3d.png","🪴":"https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Potted%20plant/3D/potted_plant_3d.png","😴":"https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Sleeping%20face/3D/sleeping_face_3d.png","🎓":"https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Graduation%20cap/3D/graduation_cap_3d.png","📚":"https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Books/3D/books_3d.png","🏊":"https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person%20swimming/Default/3D/person_swimming_3d_default.png","🔥":"https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Fire/3D/fire_3d.png","🙂":"https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Slightly%20smiling%20face/3D/slightly_smiling_face_3d.png","😄":"https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Grinning%20face%20with%20smiling%20eyes/3D/grinning_face_with_smiling_eyes_3d.png","😐":"https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Neutral%20face/3D/neutral_face_3d.png","😕":"https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Confused%20face/3D/confused_face_3d.png","😞":"https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Disappointed%20face/3D/disappointed_face_3d.png","👋":"https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Waving%20hand/Default/3D/waving_hand_3d_default.png"};
+  fx(v, k) {
+    if (Array.isArray(v)) return v.map(x => this.fx(x));
+    if (v && typeof v === 'object' && !v.$typeof) { const o = {}; for (const kk in v) o[kk] = this.fx(v[kk], kk); return o; }
+    if (typeof v === 'string' && (k === 'emoji' || k === 'e' || k === 'moodEmoji')) return this.EM[v] || 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+    return v;
+  }
+  renderVals() { return this.fx(this.rv()); }
+  rv() {
+    const s = this.scr();
+    const is = {};
+    ['splash', 'onb1', 'onb2', 'onb3', 'pick', 'create', 'challenge', 'activity', 'success', 'settings', 'components'].forEach(k => is[k] = s === k);
+    const plusOpen = this.state.plusOpen ?? (s === 'plus');
+    is.onb = s.startsWith('onb');
+    is.homeLike = ['home', 'swipe', 'plus', 'popular'].includes(s);
+    is.phone = s !== 'components';
+    is.plus = is.homeLike && plusOpen && s !== 'popular';
+    is.popular = s === 'popular';
+    is.dim = is.plus || is.popular;
+    is.nav = (is.homeLike && s !== 'popular') || s === 'activity' || s === 'settings';
+    const onBlue = s === 'splash' || is.onb || s === 'challenge';
+    const habits = this.habits();
+    const done = habits.filter(h => h.isDone).length;
+    const bp = done / habits.length;
+    const bc = 2 * Math.PI * 24;
+    const onbData = {
+      onb1: { title: 'Suis tes habitudes', text: 'Ajoute de petites habitudes et coche-les chaque jour. Rien que pour toi, sans compte.', i: 0, cta: 'Suivant' },
+      onb2: { title: 'Lance-toi des défis', text: 'Fixe-toi un objectif sur 7, 21 ou 30 jours et avance tâche par tâche.', i: 1, cta: 'Suivant' },
+      onb3: { title: 'Vois tes progrès', text: 'Taux de réussite, séries et humeur : tes statistiques, gardées sur ton appareil.', i: 2, cta: 'Commencer' },
+    }[s] || { title: '', text: '', i: 0, cta: '' };
+    onbData.dots = [0, 1, 2].map(i => ({ w: i === onbData.i ? '22px' : '8px', bg: i === onbData.i ? '#FFFFFF' : 'rgba(255,255,255,0.45)' }));
+    const starters = [
+      ['water', '💧', 'Eau', '2 L par jour', 'var(--t-teal)'], ['run', '🏃', 'Courir', '3 fois par semaine', 'var(--t-orange)'],
+      ['read', '📖', 'Lire', '20 pages', 'var(--t-violet)'], ['med', '🧘', 'Méditer', '10 min', 'var(--t-pink)'],
+      ['study', '🎓', 'Étudier', '1 h', 'var(--t-navy)'], ['journal', '✍️', 'Journal', '1 page', 'var(--t-yellow)'],
+      ['plants', '🪴', 'Plantes', 'Arroser', 'var(--t-teal)'], ['sleep', '😴', 'Dormir', '8 h', 'var(--t-violet)'],
+    ];
+    const picked = this.state.picked;
+    const picks = starters.map(([id, emoji, name, sub, tint]) => {
+      const on = picked.includes(id);
+      return { emoji, name, sub, tint, on, border: on ? '2px solid #3843FF' : '1px solid var(--border)', bg: on ? 'var(--soft)' : 'var(--card)', onClick: () => this.setState(st => ({ picked: on ? st.picked.filter(x => x !== id) : [...st.picked, id] })) };
+    });
+    const moodsE = [['😞', 'Mal'], ['😕', 'Bof'], ['😐', 'Neutre'], ['🙂', 'Bien'], ['😄', 'Très bien']];
+    const days = [['28', 'LUN', 1], ['29', 'MAR', 1], ['30', 'MER', 0], ['1', 'JEU', 1], ['2', 'VEN', 1], ['3', 'SAM', 2], ['4', 'DIM', 3]].map(([n, w, k]) => ({
+      n, w, border: k === 2 ? '2px solid #3843FF' : '1px solid var(--border)', color: k === 2 ? 'var(--pt)' : k === 3 ? 'var(--text2)' : 'var(--text)',
+      dot: k === 1 ? '#2E9BF0' : k === 0 ? '#8B5CF6' : 'transparent', onClick: () => {},
+    }));
+    const tasks = [['t1', 'Lire 20 pages'], ['t2', 'Noter une citation marquante'], ['t3', "Pas d'écran après 22 h"]].map(([id, label]) => {
+      const st = this.state.tasks[id];
+      return { label, isDone: st === 'done', isTodo: st === 'todo', isFail: st === 'fail', color: st === 'done' ? 'var(--text2)' : 'var(--text)', deco: st === 'done' ? 'line-through' : 'none', sub: st === 'done' ? 'Fait à 08:12' : st === 'fail' ? 'Manqué hier soir' : 'À faire', subColor: st === 'fail' ? 'var(--error-text)' : 'var(--text2)', onClick: () => this.setState(x => ({ tasks: { ...x.tasks, [id]: st === 'done' ? 'todo' : 'done' } })) };
+    });
+    const cal = Array.from({ length: 30 }, (_, i) => {
+      const k = i < 11 ? ([4, 8].includes(i) ? 'fail' : 'done') : i === 11 ? 'today' : 'future';
+      return { n: i + 1, bg: k === 'done' ? '#3843FF' : k === 'fail' ? 'var(--error-soft)' : 'var(--track)', color: k === 'done' ? '#FFFFFF' : k === 'fail' ? 'var(--error-text)' : k === 'today' ? 'var(--pt)' : 'var(--text2)', border: k === 'today' ? '2px solid #3843FF' : '2px solid transparent' };
+    });
+    const colors = [['teal', '#1FB5A3'], ['orange', '#FF7A1A'], ['violet', '#7B4DFF'], ['pink', '#F2558D'], ['yellow', '#FFC21A'], ['navy', '#3D4A99']].map(([id, c]) => ({ c, ring: this.state.color === id ? `0 0 0 3px var(--card), 0 0 0 5px ${c}` : 'none', onClick: () => this.setState({ color: id }) }));
+    const weekdays = ['L', 'M', 'M', 'J', 'V', 'S', 'D'].map((l, i) => {
+      const on = this.state.seg['wd' + i] ?? (i < 5);
+      return { l, bg: on ? '#3843FF' : 'var(--track)', color: on ? '#FFFFFF' : 'var(--text2)', onClick: () => this.setState(x => ({ seg: { ...x.seg, ['wd' + i]: !on } })) };
+    });
+    const stats = [['Taux de réussite', '78 %', 'var(--soft)', '🎯'], ['Complétées', '22', 'var(--success-soft)', '✅'], ['Points', '1 240', 'var(--warn-soft)', '⭐'], ['Meilleure série', '9 j', 'var(--t-orange)', '🔥'], ['Passées', '3', 'var(--track)', '⏭️'], ['Échouées', '2', 'var(--error-soft)', '✖️']].map(([l, v, bg, e]) => ({ l, v, bg, e }));
+    const mood = [['L', '🙂', 62], ['M', '😐', 45], ['M', '😕', 30], ['J', '😄', 90], ['V', '🙂', 70], ['S', '😄', 85], ['D', '', 0]].map(([d, e, h]) => ({ d, e, h: h + '%', bg: h >= 70 ? '#3843FF' : h ? '#AFB4FF' : 'var(--track)', hh: h ? h + '%' : '8%' }));
+    const accent = 'var(--pt)', off = 'var(--text2)';
+    return {
+      is, onb: onbData, picks, days, habits, tasks, cal, colors, weekdays, stats, mood, curve: this.curve(),
+      pickBtn: { bg: picked.length ? '#3843FF' : '#AFB4FF', label: picked.length ? `Continuer · ${picked.length} sélectionnée${picked.length > 1 ? 's' : ''}` : 'Choisis au moins une habitude' },
+      banner: { dash: `${(bp * bc).toFixed(1)} ${bc.toFixed(1)}`, pct: Math.round(bp * 100) + '%', title: bp >= 1 ? 'Journée bouclée !' : bp >= 0.5 ? 'Bientôt bouclé' : 'Ta journée commence', sub: `${done} sur ${habits.length} habitudes faites` },
+      sbColor: onBlue ? '#FFFFFF' : s === 'success' ? '#040415' : 'var(--text)',
+      nav: { home: is.homeLike ? accent : off, tpl: off, act: s === 'activity' ? accent : off, set: s === 'settings' ? accent : off, homeCls: is.homeLike ? 'ph-fill' : 'ph', tplCls: 'ph', actCls: s === 'activity' ? 'ph-fill' : 'ph', setCls: s === 'settings' ? 'ph-fill' : 'ph' },
+      plusRot: is.plus ? 45 : 0,
+      togglePlus: () => this.setState({ plusOpen: !plusOpen }),
+      closeOverlay: () => this.setState({ plusOpen: false }),
+      moods: moodsE.map(([e, label], i) => ({ e, label, bg: i === this.state.mood ? 'var(--soft)' : 'var(--bg)', border: i === this.state.mood ? '2px solid #3843FF' : '2px solid transparent', onClick: () => this.setState({ mood: i }) })),
+      moodEmoji: moodsE[this.state.mood][0], moodLabel: moodsE[this.state.mood][1],
+      populars: [['🚶', 'Marcher', '10 km', 'var(--t-orange)'], ['🏊', 'Nager', '30 min', 'var(--t-violet)'], ['📖', 'Lire', '20 min', 'var(--t-teal)'], ['🧘', 'Méditer', '10 min', 'var(--t-pink)'], ['😴', 'Dormir', '8 h', 'var(--t-navy)']].map(([emoji, name, sub, tint]) => ({ emoji, name, sub, tint })),
+      segRange: this.seg('range', ['Jour', 'Semaine', 'Mois'], 'Semaine'),
+      segFreq: this.seg('freq', ['Quotidien', 'Hebdo', 'Mensuel'], 'Quotidien'),
+      segType: this.seg('type', ['Construire', 'Arrêter'], 'Construire'),
+      segTheme: this.seg('theme', ['Clair', 'Sombre', 'Auto'], this.props.dark ? 'Sombre' : 'Clair'),
+      ...this.comp(),
+      tSound: this.tg('sound'), tVib: this.tg('vib'), tRemind: this.tg('remind'),
+    };
+  }
+}
+</script>
+</body>
+</html>

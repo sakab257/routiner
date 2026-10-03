@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>body{margin:0;background:#E4E8F2} a{color:#3843FF} a:hover{color:#0000FF}</style>
+</helmet>
+<section id="clair" style="padding:64px;font-family:'Figtree',system-ui,sans-serif;color:#040415;--bg:#F6F9FF;--card:#FFFFFF;--text:#040415;--text2:#686873;--text3:#9B9BA1;--border:#EAECF0;--track:#EAECF0;--soft:#EBECFF;--pt:#3843FF;--shadow:none;--dim:rgba(4,4,21,0.45);--success-soft:#E3F3FF;--success-text:#0B6BB8;--error-soft:#F0EAFF;--error-text:#6D3FD6;--warn-soft:#FFF1DE;--warn-text:#A35500;--t-orange:#FFE4D4;--t-violet:#E6E0FF;--t-pink:#FFE0EC;--t-teal:#D7F3EF;--t-yellow:#FFF3C7;--t-navy:#DDE3F5">
+<div style="display:flex;flex-direction:column;gap:6px;margin-bottom:40px"><span style="font-size:14px;font-weight:700;letter-spacing:1px;color:#3843FF">ROUTINER · USAGE PERSONNEL</span><span style="font-size:48px;font-weight:800;letter-spacing:-1px">Écrans — thème clair</span><span style="font-size:18px;color:#686873">390 × 844 · les cartes d'habitude se glissent (swipe) et les boutons + / coches sont actifs.</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:48px 40px">
+<sc-for list="{{ screens }}" as="s" hint-placeholder-count="15">
+<div data-screen-label="{{ s.label }}" style="display:flex;flex-direction:column;gap:14px"><span style="font-size:16px;font-weight:700">{{ s.label }}</span><div style="border-radius:48px;outline:1px solid #D3D8E6"><dc-import name="RoutinerScreen" screen="{{ s.id }}" hint-size="390px,844px"></dc-import></div></div>
+</sc-for>
+</div>
+</section>
+<section id="composants" style="padding:64px;font-family:'Figtree',system-ui,sans-serif;color:#040415;display:flex;flex-wrap:wrap;gap:40px;--bg:#F6F9FF;--card:#FFFFFF;--text:#040415;--text2:#686873;--text3:#9B9BA1;--border:#EAECF0;--track:#EAECF0;--soft:#EBECFF;--pt:#3843FF;--shadow:none;--dim:rgba(4,4,21,0.45);--success-soft:#E3F3FF;--success-text:#0B6BB8;--error-soft:#F0EAFF;--error-text:#6D3FD6;--warn-soft:#FFF1DE;--warn-text:#A35500;--t-orange:#FFE4D4;--t-violet:#E6E0FF;--t-pink:#FFE0EC;--t-teal:#D7F3EF;--t-yellow:#FFF3C7;--t-navy:#DDE3F5">
+<div style="width:100%;display:flex;flex-direction:column;gap:6px"><span style="font-size:48px;font-weight:800;letter-spacing:-1px">Composants &amp; états</span></div>
+<div data-screen-label="Composants clair" style="flex-shrink:0;width:1180px;border-radius:32px;overflow:hidden;outline:1px solid #D3D8E6"><dc-import name="RoutinerScreen" screen="components" hint-size="1180px,1400px"></dc-import></div>
+<div data-screen-label="Composants sombre" style="flex-shrink:0;width:1180px;border-radius:32px;overflow:hidden;outline:1px solid #D3D8E6;--bg:#0A0B1A;--card:#16182C;--text:#F4F5FF;--text2:#A6A8BA;--text3:#76788C;--border:#262840;--track:#23253D;--soft:#22266A;--pt:#9097FF;--shadow:none;--dim:rgba(0,0,0,0.6);--success-soft:#10304A;--success-text:#7CC4FF;--error-soft:#2A1F4D;--error-text:#B79BFF;--warn-soft:#3A2A12;--warn-text:#FFB866;--t-orange:#3A2518;--t-violet:#2A2350;--t-pink:#3A1C2A;--t-teal:#123330;--t-yellow:#3A3215;--t-navy:#1C2340"><dc-import name="RoutinerScreen" screen="components" dark="{{ true }}" hint-size="1180px,1400px"></dc-import></div>
+</section>
+<section id="sombre" style="padding:64px;background:#05060F;font-family:'Figtree',system-ui,sans-serif;color:#F4F5FF;--bg:#0A0B1A;--card:#16182C;--text:#F4F5FF;--text2:#A6A8BA;--text3:#76788C;--border:#262840;--track:#23253D;--soft:#22266A;--pt:#9097FF;--shadow:none;--dim:rgba(0,0,0,0.6);--success-soft:#10304A;--success-text:#7CC4FF;--error-soft:#2A1F4D;--error-text:#B79BFF;--warn-soft:#3A2A12;--warn-text:#FFB866;--t-orange:#3A2518;--t-violet:#2A2350;--t-pink:#3A1C2A;--t-teal:#123330;--t-yellow:#3A3215;--t-navy:#1C2340">
+<div style="display:flex;flex-direction:column;gap:6px;margin-bottom:40px"><span style="font-size:48px;font-weight:800;letter-spacing:-1px">Écrans — thème sombre</span><span style="font-size:18px;color:#A6A8BA">Mêmes composants, jetons inversés. Bleu primaire #3843FF pour les fonds ; textes et liens à #9097FF (AA). Succès bleu ciel, échec violet.</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:48px 40px">
+<sc-for list="{{ darkScreens }}" as="s" hint-placeholder-count="10">
+<div data-screen-label="{{ s.label }}" style="display:flex;flex-direction:column;gap:14px"><span style="font-size:16px;font-weight:700">{{ s.label }}</span><div style="border-radius:48px;box-shadow:0 0 0 1px #262840"><dc-import name="RoutinerScreen" screen="{{ s.id }}" dark="{{ true }}" hint-size="390px,844px"></dc-import></div></div>
+</sc-for>
+</div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const all = [['splash', 'Splash'], ['onb1', 'Onboarding 1 · Habitudes'], ['onb2', 'Onboarding 2 · Défis'], ['onb3', 'Onboarding 3 · Statistiques'], ['pick', 'Habitudes de départ'], ['home', 'Accueil'], ['swipe', 'Actions rapides (swipe)'], ['plus', 'Overlay « + »'], ['popular', 'Habitudes populaires'], ['create', "Création d'habitude"], ['challenge', "Détail d'un défi"], ['activity', 'Activité'], ['success', 'Succès'], ['settings', 'Réglages']];
+    const screens = all.map(([id, l], i) => ({ id, label: String(i + 1).padStart(2, '0') + ' · ' + l }));
+    const darkIds = ['home', 'swipe', 'plus', 'popular', 'create', 'challenge', 'activity', 'settings', 'pick'];
+    return { screens, darkScreens: screens.filter(s => darkIds.includes(s.id)).map(s => ({ ...s, label: s.label + ' · sombre' })) };
+  }
+}
+</script>
+</body>
+</html>
