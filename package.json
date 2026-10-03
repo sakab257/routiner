@@ -10,7 +10,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "icons": "node scripts/generate-icons.mjs"
+    "icons": "node scripts/generate-icons.mjs",
+    "emoji-index": "node scripts/generate-emoji-index.mjs"
   },
   "dependencies": {
     "@serwist/turbopack": "^9.5.12",
@@ -38,6 +39,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "emojibase-data": "^17.0.0",
     "esbuild": "^0.28.2",
     "eslint": "^9",
     "eslint-config-next": "16.3.8",

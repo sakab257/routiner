@@ -7,13 +7,13 @@ import { EmojiPicker } from "@/components/emoji-picker";
 import { Card, Emoji, FieldLabel, Screen, ScreenTitle, Segmented, StickyFooter } from "@/components/kit";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { CHALLENGE_EMOJIS, EMOJI_CHOICES, habitColor } from "@/lib/catalog";
+import { CHALLENGE_EMOJIS, habitColor } from "@/lib/catalog";
 import { addDays, formatLongDay, isDayKey, type DayKey } from "@/lib/date";
 import { useAppStore, type ChallengeInput } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
 const DURATIONS = ["7", "21", "30"] as const;
-const CHOICES = [...CHALLENGE_EMOJIS, ...EMOJI_CHOICES.filter((e) => !CHALLENGE_EMOJIS.includes(e))];
+const SUGGESTED = { id: "challenge", label: "Défis", emojis: CHALLENGE_EMOJIS };
 
 export function ChallengeForm({
   title,
@@ -172,7 +172,7 @@ export function ChallengeForm({
         </Button>
       </StickyFooter>
 
-      <EmojiPicker open={pickerOpen} onOpenChange={setPickerOpen} value={emoji} onChange={setEmoji} choices={CHOICES} />
+      <EmojiPicker open={pickerOpen} onOpenChange={setPickerOpen} value={emoji} onChange={setEmoji} featured={SUGGESTED} />
     </Screen>
   );
 }

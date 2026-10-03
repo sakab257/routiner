@@ -115,9 +115,3 @@ export function templateById(id: string | null | undefined): HabitTemplate | und
 
 export const CHALLENGE_EMOJIS = ["🏆", "🔥", "📚", "🧘", "🏃", "💧", "🌱", "🎯", "💪", "🧠"];
 
-export const EMOJI_CHOICES = [
-  "💧", "🚶", "🏃", "🏊", "🚴", "🤸", "🏋️", "🧘", "😴", "🥗", "🍎", "💊",
-  "📖", "📚", "✍️", "🎓", "🧠", "🗣️", "💻", "🎸", "🎨", "📷", "🪴", "🧹",
-  "🙏", "😊", "☀️", "🌙", "📵", "🚭", "🚬", "📱", "🍬", "🍟", "🍷", "☕",
-  "💰", "🛒", "🐶", "❤️", "🎯", "⭐",
-];

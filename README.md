@@ -20,6 +20,7 @@ pnpm build && pnpm start   # pour tester la PWA et le hors-ligne
 | `pnpm lint`       | ESLint (config Next)                               |
 | `pnpm typecheck`  | `tsc --noEmit`                                     |
 | `pnpm icons`      | Régénère les icônes PWA depuis `public/icons/logo-white.png` |
+| `pnpm emoji-index` | Régénère l'index de recherche d'icônes (`lib/emoji-index.json`, noms français CLDR) |
 
 ## Architecture
 
